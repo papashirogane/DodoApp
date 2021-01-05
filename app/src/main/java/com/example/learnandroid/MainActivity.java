@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupStartButton() {
         Button btn = (Button) findViewById(R.id.btnStart);
         btn.setOnClickListener(view -> {
-            Intent intent = DodoList.makeIntent(MainActivity.this);
+            Intent intent = DodoListActivity.makeIntent(MainActivity.this);
             startActivity(intent);
             finish();
         });

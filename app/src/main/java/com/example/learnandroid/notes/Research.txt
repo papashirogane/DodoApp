@@ -1,0 +1,45 @@
+RESEARCH
+-------------------------------
+
+Blanco et al. (2003) model used in 2005:
+    "Consider for each species
+        the lengths of the three main segments of the hindlimbs
+            (femur:                 (2) 150.0-157.0 mm (TABLE A8a TL, MORPH)
+            , tibiotarsus:          (2) 230.0-232.0 mm (TABLE A9 TL, MORPH)
+             and foot segment):     ~212.6 mm = 129 + 83.6 mm
+                    tarsometatarsus:                (2) 129.0-129.3 mm (TABLE A10 TL, MORPH)
+                    Phalanges (ungual)              (only Port Louis specimen) 21.9+19.7+23.1+18.9 = 83.6 mm
+                    *"The foot length is considered from tarsometatarsus segment to the more proximal phalange that makes contact with the ground." (inclusive, ungual?).
+        , lever arm length of the ankle extensors       Not sure, so estimate based on Anomalopteryx didiformis = 4.5 cm
+        , body mass                 ~12 kg
+        , section moduli in several points of the tibia calculated from transverse and antero-posterior diameters (tables 1 and 2)."
+    NOTE: I was initially going to use guesses from MORPHOLOGY for hindlimb lengths, body mass estimates from MORPHOLOGY or Wiki sources, and then guesses for lever arm length and moduli based on similar birds.
+        However, I ended up bypassing all these ratio guesses and straightup using Rhea velocity to fill out two formulas in Blanco's 2003 method, and inputting dodo mass as if it was Rhea mass.
+
+    SIMILAR TO RHEA AMERICANA
+        The leg bone length RATIO and body mass values seem closest to a small Rhea Americana (Blanco 2005).
+        "For their size, smaller bipeds have greater step lengths, limb excursion angles and duty factors than large bipeds because of their more crouched posture and greater effective limb length" (Gatesby).
+        Rhea lengths and body mass were greater overall than dodo lengths.. Greatest dissimilarity was ratio of other things to foot length.
+        23:35:41:25         vs      15:23:21:12
+
+        Homo sapiens max speed was 11 (Blanco, 2003).
+
+Dodo (Flightless Bird) Speed Factors
+    Height: ~1m or less
+    Weight (kg): Up to 20 kg, some sources guess more like 12
+    Leg height: Short leg
+    Hip height: Shorter than rhea (by visual observation)
+    Wing span: stubby
+
+    "Femur to tibiotarsus to tarsometatarsus = approximately 30%:44%:26% of the leg". or 1: 1.47: 0.87 (Claessens 2015).
+    This ratio seems to match the guineafowl's ratios most closely, followed by the bobwhite (although Gatesy uses metatarsus and MORPHOLOGY uses tarsometatarsus). (Gatesy 1991)
+        Rhea mass (20 kg) is closest to dodo mass estimates.
+        Guineafowl run speed (m/s): 2.49
+        Rhea run speed (m/s): 5.61
+        Human: 6
+        Hence my initial guess for runmill speed (not max speed, which I used in the app) is between guineafowl and rhea, closer to rhea to account for size. Roughly the dodo may be a little slower than a human, yet quite fast for its size.
+        "It should be noted that the maximum treadmill speeds that we recorded are unlikely to be the fastest running speeds of the larger species ... Alexander et al. (1979) report a maximal steady running speed for the ostrich of about 12 ms-1, and humans attain steady speeds of greater than 8 ms-1." (Gatesy)
+    By a glance, you can sum up an individual dodo in terms of its height and weight (mass).
+    Overall, dodos have stubby wings, short legs, and leg composition ratios closer to guineafowls, but mass closer to rheas.
+    I didn't have guineafowl speed data so I just used rhea data in the end.
+

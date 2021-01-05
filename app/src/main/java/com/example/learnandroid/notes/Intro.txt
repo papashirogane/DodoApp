@@ -1,0 +1,42 @@
+INTRO
+-------------------------------
+
+PURPOSE
+    "Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds." (Gatesy)
+
+    The purpose of this app is to practice Java, IntelliJ and Android Studio before CMPT276 begins and also explore the differences in bipedal locomotion in the flightless dodo bird and the human male adult.
+    Running speeds will be compared in a fictional scenario of adult male human sailors hunting the dodo on its home island of Mauritius.
+    We will determine using simplified methods whether a dodo will outrun the human and escape to its cave. All movement paths will be linear for the sake of simplicity.
+    Dodo speed is calculated from its mass, using Blanco's formula and information of the slightly similar Rhea americana (2003, 2005).
+    Human speed is taken from Blanco's max homo sapiens speed (2003) and adjusted based on user's input of health condition.
+
+CALCULATIONS
+    DodoCalculator.java
+        We use the method established by Blanco (2003), which he later applied to some extant (living) and extinct birds (2005).
+        Due to limited information on my part, I chose to use two of his formulas to determine velocity from mass.
+        I was then lacking two key elements:
+            A: the dodo's duty factor (the fraction of the stride period in which the foot is touching the ground). This is used in both formulas.
+            B: the relationship between formula 1 and 2.
+        To solve A, I ended up borrowing the Rhea duty factor. My reasoning was that dodo leg structure (Claessens 2015) is most similar to the kiwi (Gatesy 1997), whose duty factor is close to Rhea (Abourachid 2000).
+        "Two animals making dynamically similar movements would have equal relative stride lengths and equal duty factors" (Alexander, 2004).
+        To solve B, I borrowed the Rhea's max velocities calculated by Blanco (2005) and worked backwards to determine its own relationship between formulas 1 and 2.
+        This relationship is the "Mathematical relationship between Dp and LimbLengthVar" in DodoCalculator.java.
+        Now all I had to do was plug in dodo mass, use the two formulas together, and voila! A guesstimate of dodo max velocity.
+
+    IslandCalculator.java
+        The math used here is really simple. I calculated who would reach the cave first by dividing dodo/sailor distance from cave by dodo/sailor speed.
+
+DISCUSSION AND CONCLUSIONS
+    Despite being much shorter than the typical human male, the dodo boasts impressive max speeds, such that translated firsthand accounts from sailors state that "they can run very swiftly" (Cheke 2004).
+    Although for their size, birds already tend to be faster than humans due partly to their greater degree of crouch, the dodo could actually match a human sometimes according to this app's results, indicating that it was truly not a clumsy bird.
+    The dodo may have been well adapted to being flightless, although it did eventually go extinct from a debated combination of sailor hunters and invasive species predators.
+
+LIMITATIONS
+    When working backwards to establish a mathematical relationship between dp and limbLengthVar, I only had 3 Rhea sample points. I assumed the relationship was linear but it could have been more complex.
+    The 3 Rhea sample points I used were taken from the greatest, lowest, and mean values of rhea body mass and speed.
+        - I assumed for simplicity that the lowest body mass corresponded with lowest speed since that is a general trend (Bishop 2018) but this may not have been exactly the case.
+    Smaller birds (like the dodo compared to the rhea) tend to higher degrees of crouch which may translate to greater speed for their size, so it may have been even faster than the rhea at the inputted mass (Gatesby).
+    Dodo structure is not like the rhea's; you can observe the Rhea's thinner pointier beak and relatively large wings for a flightless bird. The dodo instead had stubbier wings perhaps used for balance or display (Claessens 2015).
+    Pre-human Mauritius was actually "densely forested and rocky" (Claessens 2015).
+    I did not consider bone strength. Claessens (2015) says "The strong, robust hind limbs would have been necessary to support the bulk of a large, terrestrial pigeon, but were equally suited for agile maneuverability"; this may have benefited the dodo when being hunted by sailors.
+    This is max speed! This isn't the speed that a dodo or human can maintain for extended periods of time. I'm assuming naively that in a hunt, dodos (who weren't all that scared of humans) are sprinting for their lives and hungry sailors are sprinting after them.
