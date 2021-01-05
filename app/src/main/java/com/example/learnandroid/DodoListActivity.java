@@ -8,6 +8,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -35,6 +38,29 @@ public class DodoListActivity extends AppCompatActivity {
 
         populateListView();
         registerClickCallback();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_dodo_list, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.edit_add:
+                Toast.makeText(this, "you clicked ADD", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.edit_edit:
+                Toast.makeText(this, "you clicked EDIT", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.edit_delete:
+                Toast.makeText(this, "you clicked DELETE", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        return true;
     }
 
     private void registerClickCallback() {

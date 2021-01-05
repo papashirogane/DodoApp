@@ -3,4 +3,9 @@
     <string name="click_me">Click me!</string>
     <string name="dodo">D O D O</string>
     <string name="start">start</string>
+    <string name="add_a_dodo">Add a dodo</string>
+    <string name="edit_a_dodo">Edit a dodo</string>
+    <string name="delete_a_dodo">Delete a dodo</string>
+    <string name="edit">Edit</string>
+    <string name="settings">Settings</string>
 </resources>

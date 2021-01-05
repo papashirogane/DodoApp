@@ -1,3 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"/>
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/iconEdit"
+        android:icon="@drawable/ic_edit"
+        android:title="@string/edit"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:id="@+id/edit_add"
+                android:title="@string/add_a_dodo"
+                app:showAsAction="ifRoom"/>
+
+            <item android:id="@+id/edit_edit"
+                android:title="@string/edit_a_dodo"
+                app:showAsAction="ifRoom"/>
+
+            <item android:id="@+id/edit_delete"
+                android:title="@string/delete_a_dodo"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/iconSettings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom"/>
+
+</menu>
