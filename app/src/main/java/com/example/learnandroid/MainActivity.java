@@ -2,6 +2,7 @@ package com.example.learnandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -23,5 +24,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+    }
+
+    public static Intent makeIntent(Context context) {
+        return new Intent(context, MainActivity.class);
     }
 }

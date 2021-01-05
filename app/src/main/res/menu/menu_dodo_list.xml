@@ -23,6 +23,11 @@
         </menu>
     </item>
 
+    <item android:id="@+id/iconHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/iconSettings"
         android:icon="@drawable/ic_settings"
         android:title="@string/settings"

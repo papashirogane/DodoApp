@@ -51,16 +51,22 @@ public class DodoListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.edit_add:
-                Toast.makeText(this, "you clicked ADD", Toast.LENGTH_SHORT).show();
+                Intent addIntent = AddActivity.makeIntent(DodoListActivity.this);
+                startActivity(addIntent);
                 break;
             case R.id.edit_edit:
-                Toast.makeText(this, "you clicked EDIT", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Heading to Edit Activity.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.edit_delete:
-                Toast.makeText(this, "you clicked DELETE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Heading to Delete Activity.", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.iconHome:
+                Intent homeIntent = MainActivity.makeIntent(DodoListActivity.this);
+                startActivity(homeIntent);
+                break;
+            default:
                 break;
         }
-
         return true;
     }
 
