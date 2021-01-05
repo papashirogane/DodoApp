@@ -35,6 +35,7 @@ public class DodoListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dodo_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("List of Dodos");
 
         populateListView();
         registerClickCallback();
