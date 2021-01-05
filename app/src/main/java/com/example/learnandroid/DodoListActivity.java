@@ -32,8 +32,7 @@ public class DodoListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dodo_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
-        
-        populateWaddle();
+
         populateListView();
         registerClickCallback();
     }
@@ -52,15 +51,6 @@ public class DodoListActivity extends AppCompatActivity {
                 // need to keep track of clicked dodo
             }
         });
-    }
-
-    private void populateWaddle() {
-        MyWaddle.add(new Dodo("Baby", 3, R.drawable.lazy1, "Waaaaa!"));
-        MyWaddle.add(new Dodo("Emo Teen", 5, R.drawable.lazy2, "Go away mom."));
-        MyWaddle.add(new Dodo("Mama Dodo", 7, R.drawable.lazy3, "I gotta quit smoking."));
-        MyWaddle.add(new Dodo("Happy Papi", 10, R.drawable.lazy4, "Borgor."));
-        MyWaddle.add(new Dodo("Big Uncle", 15, R.drawable.lazy5, "Look at these GUNS *slaps biceps*"));
-        MyWaddle.add(new Dodo("Lil Rhea", 20, R.drawable.lazy6, "Uuuhhhhh..."));
     }
 
     private void populateListView() {
