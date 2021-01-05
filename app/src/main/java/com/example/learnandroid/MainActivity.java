@@ -1,0 +1,27 @@
+package com.example.learnandroid;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main); // R = all the stuff (ids) that the compiler is generating for me
+
+        setupStartButton();
+    }
+
+    private void setupStartButton() {
+        Button btn = (Button) findViewById(R.id.btnStart);
+        btn.setOnClickListener(view -> {
+            Intent intent = DodoList.makeIntent(MainActivity.this);
+            startActivity(intent);
+            finish();
+        });
+    }
+}
