@@ -92,10 +92,10 @@ public class DodoListActivity extends AppCompatActivity {
             dodoName.setText(currentDodo.getName());
 
             TextView dodoMass = (TextView) itemView.findViewById(R.id.item_txtMass);
-            dodoMass.setText("" + currentDodo.getMassKg());
+            dodoMass.setText(currentDodo.getMassKg() + " kg");
 
             TextView dodoDetails = (TextView) itemView.findViewById(R.id.item_txtDetails);
-            dodoDetails.setText("" + currentDodo.getDetails());
+            dodoDetails.setText("\"" + currentDodo.getDetails() + "\"");
 
             return itemView;
         }
