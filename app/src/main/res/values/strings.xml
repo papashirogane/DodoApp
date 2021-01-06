@@ -10,4 +10,5 @@
     <string name="settings">Settings</string>
     <string name="home">home</string>
     <string name="dodo_list_select">Please select a dodo.</string>
+    <string name="delete_caption">Please pick a dodo to delete.</string>
 </resources>

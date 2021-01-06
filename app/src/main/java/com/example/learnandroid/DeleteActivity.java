@@ -30,7 +30,7 @@ public class DeleteActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
 
-        Toolbar toolbar = findViewById(R.id.toolbarDelete);
+        Toolbar toolbar = findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Delete a dodo.");
 
@@ -39,12 +39,12 @@ public class DeleteActivity extends BaseActivity {
     }
 
     private void registerClickCallback() {
-        ListView list = (ListView) findViewById(R.id.listviewDelete);
+        ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 MyWaddle.waddle.remove(i);
-                Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_LONG).show();
                 Intent intent = DodoListActivity.makeIntent(DeleteActivity.this);
                 startActivity(intent);
                 finish();
@@ -52,11 +52,10 @@ public class DeleteActivity extends BaseActivity {
         });
     }
 
-
     private void populateListView() {
         // Use an ArrayAdapter
         ArrayAdapter<Dodo> adapter = new DeleteActivity.DodoAdapter();
-        ListView list = (ListView) findViewById(R.id.listviewDelete);
+        ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
 
