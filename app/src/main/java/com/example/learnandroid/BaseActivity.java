@@ -37,7 +37,7 @@ public class BaseActivity extends AppCompatActivity {
                 Toast.makeText(this, "Heading to Delete Activity.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.iconHome:
-                startActivity(MainActivity.makeIntent(BaseActivity.this));
+                startActivity(DodoListActivity.makeIntent(BaseActivity.this));
                 break;
             default:
                 break;

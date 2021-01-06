@@ -2,7 +2,7 @@ package com.example.learnandroid.model.dodo;
 
 public class Dodo {
     private final String name;
-    private final double massKg;
+    public final double massKg;
     public double distDodoCaveM;
     public double maxSpeed; // change to be automatically inputted, although not shown
     private final String details;

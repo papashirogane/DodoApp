@@ -7,6 +7,29 @@
     tools:context=".AddActivity">
 
 
+    <TextView
+        android:id="@+id/add_txtMass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mass [kg]"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/add_txtName"
+        app:layout_constraintTop_toBottomOf="@+id/add_txtfillName" />
+
+    <TextView
+        android:id="@+id/add_txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Name of dodo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAdd" />
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarAdd"
         android:layout_width="0dp"
@@ -17,5 +40,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_txtfillName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Ex: John Dodo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_txtName"
+        app:layout_constraintTop_toBottomOf="@+id/add_txtName" />
+
+    <TextView
+        android:id="@+id/add_txtDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Details (optional)"
+        app:layout_constraintStart_toStartOf="@+id/add_txtName"
+        app:layout_constraintTop_toBottomOf="@+id/add_txtfillMass" />
+
+    <EditText
+        android:id="@+id/add_txtfillDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ex: I love cheeseburgers."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/add_txtfillName"
+        app:layout_constraintStart_toStartOf="@+id/add_txtName"
+        app:layout_constraintTop_toBottomOf="@+id/add_txtDetails" />
+
+    <Button
+        android:id="@+id/add_btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CREATE"
+        app:layout_constraintEnd_toEndOf="@+id/add_txtfillDetails"
+        app:layout_constraintStart_toStartOf="@+id/add_txtfillDetails"
+        app:layout_constraintTop_toBottomOf="@+id/add_txtfillDetails" />
+
+    <EditText
+        android:id="@+id/add_txtfillMass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ex: 10.0 for 10.0 kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/add_txtfillName"
+        app:layout_constraintStart_toStartOf="@+id/add_txtName"
+        app:layout_constraintTop_toBottomOf="@+id/add_txtMass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
