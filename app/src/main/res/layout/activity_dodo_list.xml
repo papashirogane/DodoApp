@@ -14,11 +14,11 @@
         android:layout_marginTop="16dp"
         android:text="@string/dodo_list_select"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/dodoListView"
+        app:layout_constraintStart_toStartOf="@+id/listviewDodo"
         app:layout_constraintTop_toBottomOf="@+id/toolbarDodoList" />
 
     <ListView
-        android:id="@+id/dodoListView"
+        android:id="@+id/listviewDodo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"

@@ -35,7 +35,7 @@ public class DodoListActivity extends BaseActivity {
     }
 
     private void registerClickCallback() {
-        ListView list = (ListView) findViewById(R.id.dodoListView);
+        ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -53,7 +53,7 @@ public class DodoListActivity extends BaseActivity {
     private void populateListView() {
         // Use an ArrayAdapter
         ArrayAdapter<Dodo> adapter = new DodoAdapter();
-        ListView list = (ListView) findViewById(R.id.dodoListView);
+        ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
 

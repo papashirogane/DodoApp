@@ -2,6 +2,7 @@ package com.example.learnandroid;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+
+        Toolbar toolbar = findViewById(R.id.toolbarBase);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Base");
     }
 
     @Override
@@ -32,7 +37,7 @@ public class BaseActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.edit_delete:
-                Toast.makeText(this, "Heading to Delete Activity.", Toast.LENGTH_SHORT).show();
+                startActivity(DeleteActivity.makeIntent(BaseActivity.this));
                 finish();
                 break;
             case R.id.iconHome:
