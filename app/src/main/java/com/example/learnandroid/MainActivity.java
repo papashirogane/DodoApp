@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(view -> {
             Intent intent = DodoListActivity.makeIntent(MainActivity.this);
             startActivity(intent);
-            finish();
         });
     }
 

@@ -41,7 +41,7 @@ public class BaseActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.iconHome:
-                startActivity(DodoListActivity.makeIntent(BaseActivity.this));
+                startActivity(MainActivity.makeIntent(BaseActivity.this));
                 finish();
                 break;
             default:
