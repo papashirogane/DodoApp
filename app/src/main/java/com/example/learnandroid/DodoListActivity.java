@@ -57,10 +57,6 @@ public class DodoListActivity extends BaseActivity {
         list.setAdapter(adapter);
     }
 
-    public static Intent makeIntent(Context context) {
-        return new Intent(context, DodoListActivity.class);
-    }
-
     private class DodoAdapter extends ArrayAdapter<Dodo> {
         public DodoAdapter() {
             super(DodoListActivity.this, R.layout.item_view, MyWaddle.waddle);
@@ -92,5 +88,7 @@ public class DodoListActivity extends BaseActivity {
         }
     }
 
-
+    public static Intent makeIntent(Context context) {
+        return new Intent(context, DodoListActivity.class);
+    }
 }

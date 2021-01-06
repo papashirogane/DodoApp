@@ -42,7 +42,6 @@ public class AddActivity extends BaseActivity {
                 Double mass = Double.parseDouble(tempMass);
 
                 if (name == "") Toast.makeText(AddActivity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
-                if (mass < 0) Toast.makeText(AddActivity.this, "Mass cannot be negative. Try again.", Toast.LENGTH_LONG).show();
                 else {
                     Dodo newDodo = new Dodo(name, mass, R.drawable.lazy1, details);
                     waddle.add(newDodo);
