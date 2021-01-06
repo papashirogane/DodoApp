@@ -45,6 +45,7 @@ public class AddActivity extends BaseActivity {
                 else {
                     Dodo newDodo = new Dodo(name, mass, R.drawable.lazy1, details);
                     waddle.add(newDodo);
+                    Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_SHORT).show();
                     Intent intent = DodoListActivity.makeIntent(AddActivity.this);
                     startActivity(intent);
                     finish();

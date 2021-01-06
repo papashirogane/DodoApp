@@ -43,13 +43,11 @@ public class DeleteActivity extends BaseActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MyWaddle.clickedDodo = MyWaddle.get(i);
-                Toast.makeText(DeleteActivity.this, "You clicked on " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_SHORT).show();
-                /*Intent intent = ThirdActivity.makeIntent(DodoListActivity.this);
-                startActivity(intent);*/
-                // opens new activity which has fill-in-the-blanks for sailor health, sailor distance, and dodo distance in metres
-                // maybe pass in an extra?
-                // need to keep track of clicked dodo
+                MyWaddle.waddle.remove(i);
+                Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_SHORT).show();
+                Intent intent = DodoListActivity.makeIntent(DeleteActivity.this);
+                startActivity(intent);
+                finish();
             }
         });
     }
