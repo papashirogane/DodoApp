@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
-public class EditActivity extends AppCompatActivity {
+public class Edit1Activity extends AppCompatActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 
     @Override
@@ -30,7 +30,7 @@ public class EditActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Delete a dodo.");
+        getSupportActionBar().setTitle("Edit a dodo!");
 
         populateListView();
         registerClickCallback();
@@ -43,8 +43,8 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 MyWaddle.clickedDodo = MyWaddle.get(i);
-                Toast.makeText(EditActivity.this, "Editing dodo " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_LONG).show();
-                Intent intent = DodoListActivity.makeIntent(EditActivity.this);
+                Toast.makeText(Edit1Activity.this, "Editing dodo " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_LONG).show();
+                Intent intent = Edit2Activity.makeIntent(Edit1Activity.this);
                 startActivity(intent);
                 finish();
             }
@@ -53,14 +53,14 @@ public class EditActivity extends AppCompatActivity {
 
     private void populateListView() {
         // Use an ArrayAdapter
-        ArrayAdapter<Dodo> adapter = new EditActivity.DodoAdapter();
+        ArrayAdapter<Dodo> adapter = new Edit1Activity.DodoAdapter();
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
 
     private class DodoAdapter extends ArrayAdapter<Dodo> {
         public DodoAdapter() {
-            super(EditActivity.this, R.layout.item_view, MyWaddle.waddle);
+            super(Edit1Activity.this, R.layout.item_view, MyWaddle.waddle);
         }
 
         @NonNull
@@ -90,6 +90,6 @@ public class EditActivity extends AppCompatActivity {
     }
 
     public static Intent makeIntent(Context context) {
-        return new Intent(context, EditActivity.class);
+        return new Intent(context, Edit1Activity.class);
     }
 }

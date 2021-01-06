@@ -4,12 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -37,7 +34,7 @@ public class BaseActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.edit_edit:
-                startActivity(EditActivity.makeIntent(BaseActivity.this));
+                startActivity(Edit1Activity.makeIntent(BaseActivity.this));
                 finish();
                 break;
                 case R.id.edit_delete:
