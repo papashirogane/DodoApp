@@ -34,22 +34,6 @@ public class DodoListActivity extends BaseActivity {
         registerClickCallback();
     }
 
-    private void registerClickCallback() {
-        ListView list = (ListView) findViewById(R.id.listviewDodo);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MyWaddle.clickedDodo = MyWaddle.get(i);
-                Toast.makeText(DodoListActivity.this, "You clicked on " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_SHORT).show();
-                /*Intent intent = ThirdActivity.makeIntent(DodoListActivity.this);
-                startActivity(intent);*/
-                // opens new activity which has fill-in-the-blanks for sailor health, sailor distance, and dodo distance in metres
-                // maybe pass in an extra?
-                // need to keep track of clicked dodo
-            }
-        });
-    }
-
     private void populateListView() {
         // Use an ArrayAdapter
         ArrayAdapter<Dodo> adapter = new DodoAdapter();
@@ -58,10 +42,10 @@ public class DodoListActivity extends BaseActivity {
     }
 
     private class DodoAdapter extends ArrayAdapter<Dodo> {
+
         public DodoAdapter() {
             super(DodoListActivity.this, R.layout.item_view, MyWaddle.waddle);
         }
-
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -86,6 +70,22 @@ public class DodoListActivity extends BaseActivity {
 
             return itemView;
         }
+    }
+
+    private void registerClickCallback() {
+        ListView list = (ListView) findViewById(R.id.listviewDodo);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                MyWaddle.clickedDodo = MyWaddle.get(i);
+                Toast.makeText(DodoListActivity.this, "You clicked on " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_SHORT).show();
+                /*Intent intent = ThirdActivity.makeIntent(DodoListActivity.this);
+                startActivity(intent);*/
+                // opens new activity which has fill-in-the-blanks for sailor health, sailor distance, and dodo distance in metres
+                // maybe pass in an extra?
+                // need to keep track of clicked dodo
+            }
+        });
     }
 
     public static Intent makeIntent(Context context) {
