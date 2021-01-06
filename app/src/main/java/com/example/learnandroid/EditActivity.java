@@ -20,15 +20,13 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
-import java.util.List;
-
-public class DeleteActivity extends BaseActivity {
+public class EditActivity extends AppCompatActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delete);
+        setContentView(R.layout.activity_edit);
 
         Toolbar toolbar = findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
@@ -38,14 +36,15 @@ public class DeleteActivity extends BaseActivity {
         registerClickCallback();
     }
 
+
     private void registerClickCallback() {
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MyWaddle.waddle.remove(i);
-                Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_LONG).show();
-                Intent intent = DodoListActivity.makeIntent(DeleteActivity.this);
+                MyWaddle.clickedDodo = MyWaddle.get(i);
+                Toast.makeText(EditActivity.this, "Editing dodo " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_LONG).show();
+                Intent intent = DodoListActivity.makeIntent(EditActivity.this);
                 startActivity(intent);
                 finish();
             }
@@ -54,14 +53,14 @@ public class DeleteActivity extends BaseActivity {
 
     private void populateListView() {
         // Use an ArrayAdapter
-        ArrayAdapter<Dodo> adapter = new DeleteActivity.DodoAdapter();
+        ArrayAdapter<Dodo> adapter = new EditActivity.DodoAdapter();
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
 
     private class DodoAdapter extends ArrayAdapter<Dodo> {
         public DodoAdapter() {
-            super(DeleteActivity.this, R.layout.item_view, MyWaddle.waddle);
+            super(EditActivity.this, R.layout.item_view, MyWaddle.waddle);
         }
 
         @NonNull
@@ -91,6 +90,6 @@ public class DeleteActivity extends BaseActivity {
     }
 
     public static Intent makeIntent(Context context) {
-        return new Intent(context, DeleteActivity.class);
+        return new Intent(context, EditActivity.class);
     }
 }

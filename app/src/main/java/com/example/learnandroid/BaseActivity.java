@@ -36,7 +36,11 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(AddActivity.makeIntent(BaseActivity.this)); // gotta check if BaseActivity is properly replaced by AddActivity or DodoListActivity
                 finish();
                 break;
-            case R.id.edit_delete:
+            case R.id.edit_edit:
+                startActivity(EditActivity.makeIntent(BaseActivity.this));
+                finish();
+                break;
+                case R.id.edit_delete:
                 startActivity(DeleteActivity.makeIntent(BaseActivity.this));
                 finish();
                 break;

@@ -13,6 +13,10 @@
                 android:title="@string/add_a_dodo"
                 app:showAsAction="ifRoom"/>
 
+            <item android:id="@+id/edit_edit"
+                android:title="@string/edit_a_dodo"
+                app:showAsAction="ifRoom"/>
+
             <item android:id="@+id/edit_delete"
                 android:title="@string/delete_a_dodo"
                 app:showAsAction="ifRoom"/>
