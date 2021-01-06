@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Edit2Activity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarEdit2"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#009688"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/activity_add"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

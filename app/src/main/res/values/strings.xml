@@ -11,4 +11,12 @@
     <string name="home">home</string>
     <string name="dodo_list_select">Please select a dodo.</string>
     <string name="delete_caption">Please pick a dodo to delete.</string>
+    <string name="add_hintMass">ex: 10.0 for 10.0 kg</string>
+    <string name="add_txtSubmit">CREATE</string>
+    <string name="edit_txtSubmit">EDIT</string>
+    <string name="add_hintDetails">Ex: I love cheeseburgers.</string>
+    <string name="details_optional">Details (optional)</string>
+    <string name="add_hintName">Ex: John Dodo</string>
+    <string name="name_of_dodo">Name of dodo</string>
+    <string name="mass_kg">Mass [kg]</string>
 </resources>

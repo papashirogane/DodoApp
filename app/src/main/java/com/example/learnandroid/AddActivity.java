@@ -28,7 +28,19 @@ public class AddActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Create Your Dodo!");
 
+        setupHints();
         setupCreateButton();
+    }
+
+    private void setupHints() {
+        TextView textView = (TextView) findViewById(R.id.add_txtfillName);
+        textView.setHint(R.string.add_hintName);
+        textView = (TextView) findViewById(R.id.add_txtfillMass);
+        textView.setHint(R.string.add_hintMass);
+        textView = (TextView) findViewById(R.id.add_txtfillDetails);
+        textView.setHint(R.string.add_hintDetails);
+        Button button = (Button) findViewById(R.id.add_btnCreate);
+        textView.setHint(R.string.add_txtSubmit);
     }
 
     private void setupCreateButton() {
