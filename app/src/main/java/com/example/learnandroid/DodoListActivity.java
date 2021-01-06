@@ -2,15 +2,11 @@ package com.example.learnandroid;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -23,10 +19,7 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class DodoListActivity extends AppCompatActivity {
+public class DodoListActivity extends BaseActivity {
     private DodoWaddle MyWaddle = DodoWaddle.getInstance();
 
     @Override
@@ -39,35 +32,6 @@ public class DodoListActivity extends AppCompatActivity {
 
         populateListView();
         registerClickCallback();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_dodo_list, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.edit_add:
-                Intent addIntent = AddActivity.makeIntent(DodoListActivity.this);
-                startActivity(addIntent);
-                break;
-            case R.id.edit_edit:
-                Toast.makeText(this, "Heading to Edit Activity.", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.edit_delete:
-                Toast.makeText(this, "Heading to Delete Activity.", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.iconHome:
-                Intent homeIntent = MainActivity.makeIntent(DodoListActivity.this);
-                startActivity(homeIntent);
-                break;
-            default:
-                break;
-        }
-        return true;
     }
 
     private void registerClickCallback() {
