@@ -28,9 +28,12 @@
         android:title="@string/home"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/iconSettings"
-        android:icon="@drawable/ic_settings"
+    <item android:id="@+id/settings"
         android:title="@string/settings"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/about"
+        android:title="@string/about"
+        app:showAsAction="never"/>
 
 </menu>

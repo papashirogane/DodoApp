@@ -19,4 +19,5 @@
     <string name="add_hintName">Ex: John Dodo</string>
     <string name="name_of_dodo">Name of dodo</string>
     <string name="mass_kg">Mass [kg]</string>
+    <string name="about">About</string>
 </resources>

@@ -45,6 +45,10 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(MainActivity.makeIntent(BaseActivity.this));
                 finish();
                 break;
+            case R.id.settings:
+                startActivity(SettingsActivity.makeIntent(BaseActivity.this));
+                finish();
+                break;
             default:
                 break;
         }
