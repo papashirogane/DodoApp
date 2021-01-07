@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HuntInputActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHunt"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#009688"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hunt_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="How far is your cute dodo to its cave? [m]"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarHunt" />
+
+    <EditText
+        android:id="@+id/hunt_txtfill1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="7.2 for 7.2 metres"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/hunt_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/hunt_txt1" />
+
+    <TextView
+        android:id="@+id/hunt_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="How far is your hungry sailor to the cave? [m]"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/hunt_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/hunt_txtfill1" />
+
+    <EditText
+        android:id="@+id/hunt_txtfill2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="15.0 for 15.0 metres"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/hunt_txtfill1"
+        app:layout_constraintStart_toStartOf="@+id/hunt_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/hunt_txt2" />
+
+    <TextView
+        android:id="@+id/hunt_txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="On a scale of 1 to 10, how healthy is your sailor?"
+        app:layout_constraintStart_toStartOf="@+id/hunt_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/hunt_txtfill2" />
+
+    <EditText
+        android:id="@+id/hunt_txtfill3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="1 (almost dead), 10 (Marvel superhero)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/hunt_txtfill1"
+        app:layout_constraintStart_toStartOf="@+id/hunt_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/hunt_txt3" />
+
+    <Button
+        android:id="@+id/hunt_btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CALCULATE SURVIVAL"
+        app:layout_constraintEnd_toEndOf="@+id/hunt_txtfill3"
+        app:layout_constraintStart_toStartOf="@+id/hunt_txtfill3"
+        app:layout_constraintTop_toBottomOf="@+id/hunt_txtfill3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

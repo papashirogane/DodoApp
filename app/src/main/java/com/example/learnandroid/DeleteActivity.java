@@ -40,15 +40,12 @@ public class DeleteActivity extends BaseActivity {
 
     private void registerClickCallback() {
         ListView list = (ListView) findViewById(R.id.listviewDodo);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MyWaddle.waddle.remove(i);
-                Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_LONG).show();
-                Intent intent = DodoListActivity.makeIntent(DeleteActivity.this);
-                startActivity(intent);
-                finish();
-            }
+        list.setOnItemClickListener((adapterView, view, i, l) -> {
+            MyWaddle.waddle.remove(i);
+            Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_LONG).show();
+            Intent intent = DodoListActivity.makeIntent(DeleteActivity.this);
+            startActivity(intent);
+            finish();
         });
     }
 

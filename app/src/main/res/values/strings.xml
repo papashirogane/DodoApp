@@ -20,4 +20,10 @@
     <string name="name_of_dodo">Name of dodo</string>
     <string name="mass_kg">Mass [kg]</string>
     <string name="about">About</string>
+    <string name="huntInput_txt1">How far is your cute dodo to its cave? [m]</string>
+    <string name="huntInput_txt2">How far is your hungry sailor from the cave? [m]</string>
+    <string name="huntInput_txt3">How healthy is your sailor, on a scale from 1 to 10?</string>
+    <string name="huntInput_txtfill3">1 (almost dead), 5 (average citizen), 10 (Marvel superhero)</string>
+    <string name="huntInput_txtfill2">10 for 10 metres</string>
+    <string name="huntInput_txtfill1">7 for 7 metres</string>
 </resources>

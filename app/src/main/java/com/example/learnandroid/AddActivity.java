@@ -24,44 +24,40 @@ public class AddActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        Toolbar toolbar = findViewById(R.id.toolbarAdd);
+        Toolbar toolbar = findViewById(R.id.toolbarInput);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Create Your Dodo!");
 
         setupHints();
-        setupCreateButton();
+        setupButton();
     }
 
     private void setupHints() {
-        TextView textView = (TextView) findViewById(R.id.add_txtfillName);
+        TextView textView = (TextView) findViewById(R.id.input_txtfill1);
         textView.setHint(R.string.add_hintName);
-        textView = (TextView) findViewById(R.id.add_txtfillMass);
+        textView = (TextView) findViewById(R.id.input_txtfill2);
         textView.setHint(R.string.add_hintMass);
-        textView = (TextView) findViewById(R.id.add_txtfillDetails);
+        textView = (TextView) findViewById(R.id.input_txtfill3);
         textView.setHint(R.string.add_hintDetails);
-        Button button = (Button) findViewById(R.id.add_btnCreate);
-        textView.setHint(R.string.add_txtSubmit);
     }
 
-    private void setupCreateButton() {
-        Button button = (Button) findViewById(R.id.add_btnCreate);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = ((TextView) findViewById(R.id.add_txtfillName)).getText().toString();
-                String details = ((TextView) findViewById(R.id.add_txtfillDetails)).getText().toString();
-                String tempMass = ((TextView) findViewById(R.id.add_txtfillMass)).getText().toString();
-                Double mass = Double.parseDouble(tempMass);
+    private void setupButton() {
+        Button button = (Button) findViewById(R.id.input_btnSubmit);
+        button.setText(R.string.add_txtSubmit);
+        button.setOnClickListener(view -> {
+            String name = ((TextView) findViewById(R.id.input_txtfill1)).getText().toString();
+            String details = ((TextView) findViewById(R.id.input_txtfill3)).getText().toString();
+            String tempMass = ((TextView) findViewById(R.id.input_txtfill2)).getText().toString();
+            Double mass = Double.parseDouble(tempMass);
 
-                if (name == "") Toast.makeText(AddActivity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
-                else {
-                    Dodo newDodo = new Dodo(name, mass, R.drawable.lazy1, details);
-                    waddle.add(newDodo);
-                    Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_LONG).show();
-                    Intent intent = DodoListActivity.makeIntent(AddActivity.this);
-                    startActivity(intent);
-                    finish();
-                }
+            if (name == "") Toast.makeText(AddActivity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
+            else {
+                Dodo newDodo = new Dodo(name, mass, R.drawable.lazy1, details);
+                waddle.add(newDodo);
+                Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_LONG).show();
+                Intent intent = DodoListActivity.makeIntent(AddActivity.this);
+                startActivity(intent);
+                finish();
             }
         });
     }

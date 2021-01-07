@@ -33,12 +33,7 @@ public class SettingsActivity extends BaseActivity {
 
     private void setupDarkSwitch() {
         Switch darkSwitch = (Switch) findViewById(R.id.switchDark);
-        darkSwitch.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Toast.makeText(SettingsActivity.this, "Sorry, no dark mode.", Toast.LENGTH_LONG).show();
-            }
-        });
+        darkSwitch.setOnCheckedChangeListener((compoundButton, b) -> Toast.makeText(SettingsActivity.this, "Sorry, no dark mode.", Toast.LENGTH_LONG).show());
 
     }
 

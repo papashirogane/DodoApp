@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,47 +21,43 @@ public class Edit2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit2);
 
-        Toolbar toolbar = findViewById(R.id.toolbarAdd);
+        Toolbar toolbar = findViewById(R.id.toolbarInput);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Edit a dodo!");
 
-        setupText();
+        setupTextFills();
         setupEditButton();
     }
 
-    private void setupText() {
+    private void setupTextFills() {
         Dodo dodo = MyWaddle.clickedDodo;
-        TextView textView = (TextView) findViewById(R.id.add_txtfillName);
+        TextView textView = (TextView) findViewById(R.id.input_txtfill1);
         textView.setText(dodo.getName());
-        textView = (TextView) findViewById(R.id.add_txtfillMass);
+        textView = (TextView) findViewById(R.id.input_txtfill2);
         textView.setText("" + dodo.getMassKg());
-        textView = (TextView) findViewById(R.id.add_txtfillDetails);
+        textView = (TextView) findViewById(R.id.input_txtfill3);
         textView.setText(dodo.getDetails());
-        Button button = (Button) findViewById(R.id.add_btnCreate);
-        textView.setHint(R.string.edit_txtSubmit);
     }
 
     private void setupEditButton() {
-        Button button = (Button) findViewById(R.id.add_btnCreate);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = ((TextView) findViewById(R.id.add_txtfillName)).getText().toString();
-                String details = ((TextView) findViewById(R.id.add_txtfillDetails)).getText().toString();
-                String tempMass = ((TextView) findViewById(R.id.add_txtfillMass)).getText().toString();
-                Double mass = Double.parseDouble(tempMass);
+        Button button = (Button) findViewById(R.id.input_btnSubmit);
+        button.setText(R.string.edit_txtSubmit);
+        button.setOnClickListener(view -> {
+            String name = ((TextView) findViewById(R.id.input_txtfill1)).getText().toString();
+            String details = ((TextView) findViewById(R.id.input_txtfill3)).getText().toString();
+            String tempMass = ((TextView) findViewById(R.id.input_txtfill2)).getText().toString();
+            Double mass = Double.parseDouble(tempMass);
 
-                if (name == "") Toast.makeText(Edit2Activity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
-                else {
-                    Dodo dodo = MyWaddle.clickedDodo;
-                    dodo.name = name;
-                    dodo.massKg = mass;
-                    dodo.details = details;
-                    Toast.makeText(Edit2Activity.this, "You edited a dodo!", Toast.LENGTH_LONG).show();
-                    Intent intent = DodoListActivity.makeIntent(Edit2Activity.this);
-                    startActivity(intent);
-                    finish();
-                }
+            if (name.isEmpty()) Toast.makeText(Edit2Activity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
+            else {
+                Dodo dodo = MyWaddle.clickedDodo;
+                dodo.name = name;
+                dodo.massKg = mass;
+                dodo.details = details;
+                Toast.makeText(Edit2Activity.this, "You edited a dodo!", Toast.LENGTH_LONG).show();
+                Intent intent = DodoListActivity.makeIntent(Edit2Activity.this);
+                startActivity(intent);
+                finish();
             }
         });
     }

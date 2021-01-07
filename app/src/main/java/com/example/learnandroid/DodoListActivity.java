@@ -28,7 +28,7 @@ public class DodoListActivity extends BaseActivity {
         setContentView(R.layout.activity_dodo_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("List of Dodos");
+        getSupportActionBar().setTitle("Dodo Speed Calculator");
 
         populateListView();
         registerClickCallback();
@@ -74,17 +74,9 @@ public class DodoListActivity extends BaseActivity {
 
     private void registerClickCallback() {
         ListView list = (ListView) findViewById(R.id.listviewDodo);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MyWaddle.clickedDodo = MyWaddle.get(i);
-                Toast.makeText(DodoListActivity.this, "You clicked on " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_SHORT).show();
-                /*Intent intent = ThirdActivity.makeIntent(DodoListActivity.this);
-                startActivity(intent);*/
-                // opens new activity which has fill-in-the-blanks for sailor health, sailor distance, and dodo distance in metres
-                // maybe pass in an extra?
-                // need to keep track of clicked dodo
-            }
+        list.setOnItemClickListener((adapterView, view, i, l) -> {
+            MyWaddle.clickedDodo = MyWaddle.get(i);
+            startActivity(HuntInputActivity.makeIntent(DodoListActivity.this));
         });
     }
 

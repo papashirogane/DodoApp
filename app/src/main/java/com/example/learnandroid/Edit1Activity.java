@@ -39,15 +39,12 @@ public class Edit1Activity extends AppCompatActivity {
 
     private void registerClickCallback() {
         ListView list = (ListView) findViewById(R.id.listviewDodo);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MyWaddle.clickedDodo = MyWaddle.get(i);
-                Toast.makeText(Edit1Activity.this, "Editing dodo " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_LONG).show();
-                Intent intent = Edit2Activity.makeIntent(Edit1Activity.this);
-                startActivity(intent);
-                finish();
-            }
+        list.setOnItemClickListener((adapterView, view, i, l) -> {
+            MyWaddle.clickedDodo = MyWaddle.get(i);
+            Toast.makeText(Edit1Activity.this, "Editing dodo " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_LONG).show();
+            Intent intent = Edit2Activity.makeIntent(Edit1Activity.this);
+            startActivity(intent);
+            finish();
         });
     }
 
