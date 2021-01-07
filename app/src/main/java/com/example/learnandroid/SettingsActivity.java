@@ -1,6 +1,7 @@
 package com.example.learnandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
@@ -8,6 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.Toast;
+
+import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO;
+import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES;
 
 /**
  * Settings. Contains dark mode theme change.
@@ -31,7 +36,7 @@ public class SettingsActivity extends BaseActivity {
         darkSwitch.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
+                Toast.makeText(SettingsActivity.this, "Sorry, no dark mode.", Toast.LENGTH_LONG).show();
             }
         });
 
