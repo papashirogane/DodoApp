@@ -1,6 +1,5 @@
 package com.example.learnandroid.model.island;
 
-import com.example.learnandroid.model.HuntResults;
 import com.example.learnandroid.model.dodo.DodoCalculator;
 
 /**
@@ -10,7 +9,7 @@ import com.example.learnandroid.model.dodo.DodoCalculator;
  */
 public class IslandCalculator {
     private static IslandCalculator single_instance = null;
-    private Island island;
+    public Island island;
     public double sailorTime;
     public double dodoTime;
     public boolean survival = false;

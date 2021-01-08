@@ -55,6 +55,7 @@ public class HuntInputActivity extends BaseActivity {
                 Toast.makeText(HuntInputActivity.this, c.getMessage()
                         + "\nYour sailor's speed was " + sailor.getPersonalMaxSpeed()
                         + ".\nYour dodo's speed was " + dodo.maxSpeed, Toast.LENGTH_LONG).show();
+                startActivity(HuntResultsActivity.makeIntent(HuntInputActivity.this));
             }
         });
     }
