@@ -38,17 +38,20 @@ public class HuntInputActivity extends BaseActivity {
             String strDistDodo = ((TextView) findViewById(R.id.hunt_txtfill1)).getText().toString();
             String strDistSailor = ((TextView) findViewById(R.id.hunt_txtfill2)).getText().toString();
             String strHealthSailor = ((TextView) findViewById(R.id.hunt_txtfill3)).getText().toString();
+            Double distDodo = Double.parseDouble(strDistDodo);
+            Double distSailor = Double.parseDouble(strDistSailor);
+            Integer healthSailor = Integer.parseInt(strHealthSailor);
+
             if (strDistDodo.isEmpty() || strDistSailor.isEmpty() || strHealthSailor.isEmpty()) {
                 Toast.makeText(HuntInputActivity.this, "All fields must be filled.", Toast.LENGTH_LONG).show();
+            } else if (healthSailor < 1 || 10 < healthSailor) {
+                Toast.makeText(HuntInputActivity.this, "Health must be from 1 to 10 inclusive.", Toast.LENGTH_LONG).show();
             } else {
-                Double distDodo = Double.parseDouble(strDistDodo);
-                Double distSailor = Double.parseDouble(strDistSailor);
-                Integer healthSailor = Integer.parseInt(strHealthSailor);
-
                 Sailor sailor = new Sailor(distSailor, healthSailor);
                 Dodo dodo = DodoWaddle.getInstance().clickedDodo;
                 Island island = new Island(dodo, distDodo, sailor);
-                IslandCalculator c = new IslandCalculator(island);
+                IslandCalculator c = IslandCalculator.getInstance();
+                c.calcSurvival(island);
                 Toast.makeText(HuntInputActivity.this, c.getMessage()
                         + "\nYour sailor's speed was " + sailor.getPersonalMaxSpeed()
                         + ".\nYour dodo's speed was " + dodo.maxSpeed, Toast.LENGTH_LONG).show();

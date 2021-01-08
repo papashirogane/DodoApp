@@ -1,5 +1,6 @@
 package com.example.learnandroid.model.island;
 
+import com.example.learnandroid.model.HuntResults;
 import com.example.learnandroid.model.dodo.DodoCalculator;
 
 /**
@@ -8,19 +9,23 @@ import com.example.learnandroid.model.dodo.DodoCalculator;
  * If dodo can get to cave faster than sailor, dodo survives.
  */
 public class IslandCalculator {
-    private final Island island;
+    private static IslandCalculator single_instance = null;
+    private Island island;
     public double sailorTime;
     public double dodoTime;
     public boolean survival = false;
     public final static String[] messages = new String[]
             {"Om nom nom! Your hungry sailor is no longer hungry.", "Congrats! Your cute dodo made it back home in one piece."};
 
-    public IslandCalculator(Island island) {
-        this.island = island;
-        calcSurvival();
+    public static IslandCalculator getInstance() {
+        if (single_instance == null) {
+            single_instance = new IslandCalculator();
+        }
+        return single_instance;
     }
 
-    public void calcSurvival() {
+    public void calcSurvival(Island island) {
+        this.island = island;
         sailorTime = calcSailorTime();
         dodoTime = calcDodoTime();
         if (dodoTime < sailorTime) {
