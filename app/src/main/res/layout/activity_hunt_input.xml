@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="1 (almost dead), 10 (Marvel superhero)"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/hunt_txtfill1"
         app:layout_constraintStart_toStartOf="@+id/hunt_txt1"
         app:layout_constraintTop_toBottomOf="@+id/hunt_txt3" />

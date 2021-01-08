@@ -12,6 +12,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.learnandroid.model.dodo.Dodo;
+import com.example.learnandroid.model.dodo.DodoWaddle;
+import com.example.learnandroid.model.island.Island;
+import com.example.learnandroid.model.island.IslandCalculator;
+import com.example.learnandroid.model.sailor.Sailor;
+
 public class HuntInputActivity extends BaseActivity {
 
     @Override
@@ -21,7 +27,7 @@ public class HuntInputActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarHunt);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Dodo Speed Calculator");
+        getSupportActionBar().setTitle("Dodo Hunt");
 
         setupButton();
     }
@@ -29,14 +35,23 @@ public class HuntInputActivity extends BaseActivity {
     private void setupButton() {
         Button button = (Button) findViewById(R.id.hunt_btnSubmit);
         button.setOnClickListener(view -> {
-            String distDodo = ((TextView) findViewById(R.id.hunt_txt1)).getText().toString();
-            String distSailor = ((TextView) findViewById(R.id.hunt_txt2)).getText().toString();
-            String healthSailor = ((TextView) findViewById(R.id.hunt_txt3)).getText().toString();
-            if (distDodo.isEmpty() || distSailor.isEmpty() || healthSailor.isEmpty()) {
+            String strDistDodo = ((TextView) findViewById(R.id.hunt_txtfill1)).getText().toString();
+            String strDistSailor = ((TextView) findViewById(R.id.hunt_txtfill2)).getText().toString();
+            String strHealthSailor = ((TextView) findViewById(R.id.hunt_txtfill3)).getText().toString();
+            if (strDistDodo.isEmpty() || strDistSailor.isEmpty() || strHealthSailor.isEmpty()) {
                 Toast.makeText(HuntInputActivity.this, "All fields must be filled.", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(HuntInputActivity.this, "Good job!", Toast.LENGTH_LONG).show();
-                startActivity(MainActivity.makeIntent(HuntInputActivity.this));
+                Double distDodo = Double.parseDouble(strDistDodo);
+                Double distSailor = Double.parseDouble(strDistSailor);
+                Integer healthSailor = Integer.parseInt(strHealthSailor);
+
+                Sailor sailor = new Sailor(distSailor, healthSailor);
+                Dodo dodo = DodoWaddle.getInstance().clickedDodo;
+                Island island = new Island(dodo, distDodo, sailor);
+                IslandCalculator c = new IslandCalculator(island);
+                Toast.makeText(HuntInputActivity.this, c.getMessage()
+                        + "\nYour sailor's speed was " + sailor.getPersonalMaxSpeed()
+                        + ".\nYour dodo's speed was " + dodo.maxSpeed, Toast.LENGTH_LONG).show();
             }
         });
     }

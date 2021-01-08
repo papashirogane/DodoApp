@@ -28,7 +28,7 @@ public class DodoListActivity extends BaseActivity {
         setContentView(R.layout.activity_dodo_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Dodo Speed Calculator");
+        getSupportActionBar().setTitle("Dodo Hunt");
 
         populateListView();
         registerClickCallback();
