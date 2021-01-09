@@ -44,14 +44,14 @@ public class HuntResultsActivity extends BaseActivity {
     private void setupLearnMoreButton() {
         Button button = (Button) findViewById(R.id.results_btnLearn);
         button.setOnClickListener(view -> {
-            Toast.makeText(HuntResultsActivity.this, "Learning More", Toast.LENGTH_LONG).show();
+            startActivity(LearnActivity.makeIntent(HuntResultsActivity.this));
         });
     }
 
     private void setupHuntAgainButton() {
         Button button = (Button) findViewById(R.id.results_btnAgain);
         button.setOnClickListener(view -> {
-            Toast.makeText(HuntResultsActivity.this, "Hunting Again", Toast.LENGTH_LONG).show();
+            startActivity(DodoListActivity.makeIntent(HuntResultsActivity.this));
         });
     }
 
