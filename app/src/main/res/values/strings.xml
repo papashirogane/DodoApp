@@ -43,7 +43,8 @@
     <string name="learn_strConc"> The dodo is a fascinating creature of study. External characteristics like its stubby wings and round body not only make it endearing in media, but actually help contribute to a body well-suited to flightless living. Meanwhile, internal characteristics like leg composition and stance also do their part, providing an ongoing source of research and discovery.\n</string>
     <string name="results_titleCongrats">Congrats!</string>
     <string name="results_messageCongrats">Your cute dodo is safe in its cave. Whew!</string>
-    <string name="results_strScience">Contrary to popular belief, dodos are surprisingly agile creatures. As flightless birds, they are well suited to ground running and boast high speeds for their size. But why?</string>
+    <string name="results_strScienceSurvived">Contrary to popular belief, dodos are surprisingly agile creatures. As flightless birds, they are well suited to ground running and boast high speeds for their size. But why?</string>
+    <string name="results_strScienceDied">Although the dodo lost this time, dodos are actually quite agile. As flightless birds, they are well suited to ground running and boast high speeds for their size. But why?</string>
     <string name="references">References</string>
     <string name="learn_strRef">
         Abourachid, Anick &amp; Renous, Sabine. \"Bipedal locomotion in ratites (Paleognatiform): examples of cursorial birds.\" British Ornithologists\' Union, Ibis, vol. 142, 2000, pp. 538-549. doi:10.1111/j.1474-919X.2000.tb04455.x.\n\n

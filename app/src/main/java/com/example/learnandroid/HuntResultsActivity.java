@@ -26,9 +26,22 @@ public class HuntResultsActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Dodo Hunt");
 
+        setupText();
         setupTable();
         setupLearnMoreButton();
         setupHuntAgainButton();
+    }
+
+    private void setupText() {
+        IslandCalculator c = IslandCalculator.getInstance();
+        if (!c.survival) {
+            TextView title = findViewById(R.id.results_txtTitle);
+            title.setText("Om nom nom!");
+            TextView message = findViewById(R.id.results_txtMessage);
+            message.setText("Looks like your sailor is no longer hungry...");
+            TextView science = findViewById(R.id.results_txtScience);
+            science.setText(R.string.results_strScienceDied);
+        }
     }
 
     private void setupTable() {

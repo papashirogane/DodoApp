@@ -20,7 +20,7 @@ public class DodoWaddle implements Iterable<Dodo> {
         waddle.add(new Dodo("Mama Dodo", 7, R.drawable.lazy3, "I gotta quit smoking."));
         waddle.add(new Dodo("Happy Papi", 10, R.drawable.lazy4, "Borgor."));
         waddle.add(new Dodo("Big Uncle", 15, R.drawable.lazy5, "Look at these GUNS *slaps biceps*"));
-        waddle.add(new Dodo("Lil Rhea", 20, R.drawable.lazy6, "UwU"));
+        waddle.add(new Dodo("Lil Rhea", 20, R.drawable.lazy6, "I'm about the size and mass of a "));
     }
 
     public static DodoWaddle getInstance() {
