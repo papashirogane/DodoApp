@@ -83,7 +83,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Contrary to popular belief, dodos are surprisingly agile creatures. As flightless birds, they are well suited to ground running and boast high speeds for their size. But why?\n\nYou may already know that dodos and humans are both bipedal creatures. So what makes dodo bipedal locomotion different from humans'? This is partly due to their degree of crouch. While humans stand up straight, dodos (and other birds) have crouched standing stances. Imagine a sprinter just before a race begins; their stance is already at a crouch, ready to transition smoothly into a sprint. Among other reasons, this crouch contributes to the dodo's impressive agility."
+        android:text="Contrary to popular belief, dodos are surprisingly agile creatures. As flightless birds, they are well suited to ground running and boast high speeds for their size. But why?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/results_txtTable" />

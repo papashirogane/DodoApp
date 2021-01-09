@@ -26,4 +26,18 @@
     <string name="huntInput_txtfill3">1 (almost dead), 5 (average citizen), 10 (Marvel superhero)</string>
     <string name="huntInput_txtfill2">10 for 10 metres</string>
     <string name="huntInput_txtfill1">7 for 7 metres</string>
+    <string name="learn_more">Learn more</string>
+    <string name="learn_strQuote">Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds. - Gatesy, 2009</string>
+    <string name="intro">Intro</string>
+    <string name="learn_strIntro">Contrary to popular belief, dodos were not clumsy creatures. Rather, the flightless birds were adept at transversing their rocky, dense Mauritius island. Historical accounts from sailors claimed that dodos \"can run very swiftly\" (Cheke 2004). What factors contribute to this surprising speed?</string>
+    <string name="degree_of_crouch">Degree of Crouch</string>
+    <string name="learn_strDeg">While humans stand up straight, dodos (and other birds) do not. In fact, the dodo\'s femur is \"relatively horizontal\" in position (Claessens). Imagine a sprinter just before a race begins; their stance is already at a crouch, ready to transition into a sprint. Smaller birds tend to have higher degrees of crouch, \"allowing them to maintain ground contact with the feet for longer durations (which increases stability), allowing them to make longer relative strides, and allowing them to transition to an aerial run at faster relative speeds\" (Bishop et al.).</string>
+    <string name="balance">Balance</string>
+    <string name="learn_strBalance">If you\'ve seen a picture of a dodo, you\'ve probably noticed its stubby wings. Although flightless, dodo wings had \"well-developed muscle insertions\" and \"were not entirely vestigial\"; instead, they were probably used for balance and/or display, similarly to extant (living) columbids (Claessens). But if the dodo is similar to flying extant columbids, you ask, why can\'t it fly? The simple answer is that it probably did not need to. Until Mauritius was discovered, the dodo was thriving on the rocky and vegetation-dense island, and its shortened wing meant that upon extending its elbow for balance, the wing would not drag on the ground (Claessens).</string>
+    <string name="strength">Leg Strength</string>
+    <string name="learn_strStrength">Dodos enjoyed \"strong, robust hind limbs\" to offset its increased body weight. These limbs also served to improve agility on the island of Mauritius, which supposedly had some open \"palm savanna\" but was otherwise covered by forest (Cheke 2010, Claessens).</string>
+    <string name="conclusions">Conclusion</string>
+    <string name="learn_strConc"> The dodo is a fascinating creature of study. External characteristics like its stubby wings and round body not only make it endearing in media, but actually help contribute to a body well-suited to flightless living. Meanwhile, internal characteristics like leg composition and stance also do their part, providing an ongoing source of research and discovery.\n</string>
+    <string name="references">References</string>
+    <string name="learn_strRef">ref body</string>
 </resources>
