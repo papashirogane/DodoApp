@@ -27,7 +27,10 @@
     <string name="huntInput_txtfill2">10 for 10 metres</string>
     <string name="huntInput_txtfill1">7 for 7 metres</string>
     <string name="learn_more">Learn more</string>
-    <string name="learn_strQuote">Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds. - Gatesy, 2009</string>
+    <string name="learn_strQuote">\"Amongst these birds were those which in India they call Dod-aersen (being a kind of very big goose); these birds are unable to fly, and instead of wings, they merely have a few small pins, yet they can run very swiftly.\"</string>
+    <string name="learn_strQuoteCite">- 18th century manuscript (Cheke 2004)</string>
+    <string name="about_strQuote">\"Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds.\"</string>
+    <string name="about_strQuoteCite">- Gatesy 2009</string>
     <string name="intro">Intro</string>
     <string name="learn_strIntro">Contrary to popular belief, dodos were not clumsy creatures. Rather, the flightless birds were adept at transversing their rocky, dense Mauritius island. Historical accounts from sailors claimed that dodos \"can run very swiftly\" (Cheke 2004). What factors contribute to this surprising speed?</string>
     <string name="degree_of_crouch">Degree of Crouch</string>
@@ -38,6 +41,20 @@
     <string name="learn_strStrength">Dodos enjoyed \"strong, robust hind limbs\" to offset its increased body weight. These limbs also served to improve agility on the island of Mauritius, which supposedly had some open \"palm savanna\" but was otherwise covered by forest (Cheke 2010, Claessens).</string>
     <string name="conclusions">Conclusion</string>
     <string name="learn_strConc"> The dodo is a fascinating creature of study. External characteristics like its stubby wings and round body not only make it endearing in media, but actually help contribute to a body well-suited to flightless living. Meanwhile, internal characteristics like leg composition and stance also do their part, providing an ongoing source of research and discovery.\n</string>
+    <string name="results_titleCongrats">Congrats!</string>
+    <string name="results_messageCongrats">Your cute dodo is safe in its cave. Whew!</string>
+    <string name="results_strScience">Contrary to popular belief, dodos are surprisingly agile creatures. As flightless birds, they are well suited to ground running and boast high speeds for their size. But why?</string>
     <string name="references">References</string>
-    <string name="learn_strRef">ref body</string>
+    <string name="learn_strRef">
+        Abourachid, Anick &amp; Renous, Sabine. \"Bipedal locomotion in ratites (Paleognatiform): examples of cursorial birds.\" British Ornithologists\' Union, Ibis, vol. 142, 2000, pp. 538-549. doi:10.1111/j.1474-919X.2000.tb04455.x.\n\n
+        Bishop, P J et al. \“The influence of speed and size on avian terrestrial locomotor biomechanics: Predicting locomotion in extinct theropod dinosaurs.\” PloS one vol. 13,2 e0192172. 21 Feb. 2018, doi:10.1371/journal.pone.0192172.\n\n
+        Blanco, R., Gambini, Rodolfo &amp; Fariña, Richard. \"Mechanical model for theoretical determination of maximum running speed in mammals.\" Journal of theoretical biology vol 222. 1, Jun. 2003, doi:10.1016/S0022-5193(03)00019-5.\n\n
+        Blanco, R. E. &amp; Jones, Washington W. \"Terror birds on the run: A mechanical model to estimate its maximum running speed.\" Proceedings. Biological sciences / The Royal Society vol. 272. 1 Oct. 2005, doi:10.1098/rspb.2005.3133.\n\n
+        Cheke, Anthony &amp; Hume, Julian P. \"Lost Land of the Dodo: The Ecological History of Mauritius, Réunion and Rodrigues.\" Bloomsbury Publishing, 2020, pp. 32-39.\n\n
+        Cheke, Anthony. \"The Dodo\'s last island - where did Volkert Evertsz meet the last wild Dodos?\" Proceedings. The Royal Society vol. 7, 2004. http://dodobooks.com/wp-content/uploads/2012/01/Cheke-2004-DodosLastIsland.pdf. Accessed 31 Dec. 2020.\n\n
+        Claessens, Leon P.A.M., et al. \“The Morphology of the Thirioux Dodos.\” Memoir (Society of Vertebrate Paleontology), vol. 15, 2015, pp. 29–187. JSTOR, www.jstor.org/stable/44512774. Accessed 31 Dec. 2020.\n\n
+        Gatesy, Stephen &amp; Biewener, Andrew. \"Bipedal locomotion: effects of speed, size and limb posture in birds and humans.\" Journal of Zoology vol. 224. 23 Dec. 2009, doi:10.1111/j.1469-7998.1991.tb04794.x.\n\n
+        Gatesy, Stephen M., &amp; Middleton, Kevin M. \“Bipedalism, Flight, and the Evolution of Theropod Locomotor Diversity.\” Journal of Vertebrate Paleontology, vol. 17, no. 2, 1997, pp. 308–329. JSTOR, www.jstor.org/stable/4523809. Accessed 31 Dec. 2020.\n\n
+        van Heteren, Anneke H, et al. \"Neither slim nor fat: estimating the mass of the dodo (Raphus cucullatus, Aves, Columbiformes) based on the largest sample of dodo bones to date.\” PeerJ vol. 5 e4110. 5 Dec. 2017, doi:10.7717/peerj.4110.
+    </string>
 </resources>

@@ -53,6 +53,10 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(LearnActivity.makeIntent(BaseActivity.this));
                 finish();
                 break;
+            case R.id.about:
+                startActivity(AboutActivity.makeIntent(BaseActivity.this));
+                finish();
+                break;
             default:
                 break;
         }

@@ -2,7 +2,7 @@ INTRO
 -------------------------------
 
 PURPOSE
-    "Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds." (Gatesy)
+    "Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds." (Gatesy 2009)
 
     The purpose of this app is to practice Java, IntelliJ and Android Studio before CMPT276 begins and also explore the differences in bipedal locomotion in the flightless dodo bird and the human male adult.
     Running speeds will be compared in a fictional scenario of adult male human sailors hunting the dodo on its home island of Mauritius.
