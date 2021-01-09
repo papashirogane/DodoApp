@@ -60,7 +60,7 @@
                 android:layout_marginRight="0dp"
                 android:text="@string/learn_strQuoteCite"
                 android:textSize="18sp"
-                android:gravity="right" />
+                android:gravity="end" />
 
             <TextView
                 android:id="@+id/learn_txtIntroTitle"
@@ -187,41 +187,9 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/learn_txtEndSpace1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="\n\n\n\n\n\n" />
-
-            <TextView
-                android:id="@+id/learn_txtRefTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="0dp"
-                android:text="@string/references"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/learn_txtRefBody"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="0dp"
-                android:text="@string/learn_strRef"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/learn_txtEndSpace2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="\n\n\n\n\n\n" />
+                android:text="@string/endSpace" />
 
         </LinearLayout>
     </ScrollView>

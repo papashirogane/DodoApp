@@ -17,7 +17,7 @@ CALCULATIONS
         I was then lacking two key elements:
             A: the dodo's duty factor (the fraction of the stride period in which the foot is touching the ground). This is used in both formulas.
             B: the relationship between formula 1 and 2.
-        To solve A, I ended up borrowing the Rhea duty factor. My reasoning was that dodo leg structure (Claessens 2015) is most similar to the kiwi (Gatesy 1997), whose duty factor is close to Rhea (Abourachid 2000).
+        To solve A, I ended up borrowing the Rhea duty factor. My reasoning was that dodo leg structure (Claessens 2015) is most similar to the kiwi (Gatesy 1997), whose duty factor is close to Rhea (Abourachid & Renous 2000).
         "Two animals making dynamically similar movements would have equal relative stride lengths and equal duty factors" (Alexander, 2004).
         To solve B, I borrowed the Rhea's max velocities calculated by Blanco (2005) and worked backwards to determine its own relationship between formulas 1 and 2.
         This relationship is the "Mathematical relationship between Dp and LimbLengthVar" in DodoCalculator.java.

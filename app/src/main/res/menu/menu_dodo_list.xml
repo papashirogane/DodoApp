@@ -40,4 +40,8 @@
         android:title="@string/about"
         app:showAsAction="never"/>
 
+    <item android:id="@+id/refs"
+        android:title="References"
+        app:showAsAction="never"/>
+
 </menu>

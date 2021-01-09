@@ -57,6 +57,10 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(AboutActivity.makeIntent(BaseActivity.this));
                 finish();
                 break;
+            case R.id.refs:
+                startActivity(ReferencesActivity.makeIntent(BaseActivity.this));
+                finish();
+                break;
             default:
                 break;
         }
