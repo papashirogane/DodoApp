@@ -77,8 +77,6 @@ public class AddActivity extends BaseActivity {
                 button.setOnTouchListener((view, motionEvent) -> {
                     switch (motionEvent.getAction()) {
                         case MotionEvent.ACTION_DOWN:
-                            // If not pressed, unpress all other buttons
-                            // if pressed, do nothing
                             if (!view.isPressed()) {
                                 clearPressed();
                                 view.setPressed(true);

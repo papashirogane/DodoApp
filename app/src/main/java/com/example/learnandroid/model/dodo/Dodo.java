@@ -7,7 +7,7 @@ public class Dodo {
     public double maxSpeed; // change to be automatically inputted, although not shown
     public String details;
 
-    private int iconId;
+    public int iconId;
 
     public Dodo(String name, double massKg, int iconId, String details) {
         this.name = name;
