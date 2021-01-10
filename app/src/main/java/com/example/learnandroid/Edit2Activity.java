@@ -16,7 +16,7 @@ import com.example.learnandroid.model.dodo.DodoWaddle;
 /**
  * Shows dodo information fiels that can be edited
  */
-public class Edit2Activity extends AppCompatActivity {
+public class Edit2Activity extends BaseActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 
     @Override

@@ -24,7 +24,7 @@ import com.example.learnandroid.model.dodo.DodoWaddle;
  * Shows a list of dodos.
  * When a dodo is clicked, proceeds to Edit2Activity where dodo info can be edited
  */
-public class Edit1Activity extends AppCompatActivity {
+public class Edit1Activity extends BaseActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 
     @Override
@@ -45,7 +45,6 @@ public class Edit1Activity extends AppCompatActivity {
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setOnItemClickListener((adapterView, view, i, l) -> {
             MyWaddle.clickedDodo = MyWaddle.get(i);
-            Toast.makeText(Edit1Activity.this, "Editing dodo " + MyWaddle.clickedDodo.getName(), Toast.LENGTH_LONG).show();
             Intent intent = Edit2Activity.makeIntent(Edit1Activity.this);
             startActivity(intent);
             finish();
