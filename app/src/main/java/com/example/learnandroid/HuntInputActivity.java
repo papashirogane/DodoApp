@@ -55,9 +55,6 @@ public class HuntInputActivity extends BaseActivity {
                 Island island = new Island(dodo, distDodo, sailor);
                 IslandCalculator c = IslandCalculator.getInstance();
                 c.calcSurvival(island);
-                Toast.makeText(HuntInputActivity.this, c.getMessage()
-                        + "\nYour sailor's speed was " + sailor.getPersonalMaxSpeed()
-                        + ".\nYour dodo's speed was " + dodo.maxSpeed, Toast.LENGTH_LONG).show();
                 startActivity(HuntResultsActivity.makeIntent(HuntInputActivity.this));
             }
         });

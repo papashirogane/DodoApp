@@ -9,7 +9,7 @@
     <string name="edit">Edit</string>
     <string name="settings">Settings</string>
     <string name="home">home</string>
-    <string name="dodo_list_select">Please select a dodo.</string>
+    <string name="dodo_list_select">Pick a dodo to hunt!</string>
     <string name="delete_caption">Please pick a dodo to delete.</string>
     <string name="add_hintMass">ex: 10.0 for 10.0 kg</string>
     <string name="add_txtSubmit">CREATE</string>

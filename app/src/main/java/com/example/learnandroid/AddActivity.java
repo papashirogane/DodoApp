@@ -116,11 +116,13 @@ public class AddActivity extends BaseActivity {
         button.setOnClickListener(view -> {
             String name = ((TextView) findViewById(R.id.input_txtfill1)).getText().toString();
             String tempMass = ((TextView) findViewById(R.id.input_txtfill2)).getText().toString();
-            Double mass = Double.parseDouble(tempMass);
             String details = ((TextView) findViewById(R.id.input_txtfill3)).getText().toString();
 
-            if (name == "") Toast.makeText(AddActivity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
+            if (name.isEmpty() || tempMass.isEmpty())
+                Toast.makeText(AddActivity.this,
+                        "Name and mass cannot be empty. Try again.", Toast.LENGTH_LONG).show();
             else {
+                Double mass = Double.parseDouble(tempMass);
                 Dodo newDodo = new Dodo(name, mass, clickedIconId, details);
                 waddle.add(newDodo);
                 Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_LONG).show();

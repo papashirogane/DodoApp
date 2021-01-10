@@ -119,10 +119,12 @@ public class Edit2Activity extends BaseActivity {
             String name = ((TextView) findViewById(R.id.input_txtfill1)).getText().toString();
             String details = ((TextView) findViewById(R.id.input_txtfill3)).getText().toString();
             String tempMass = ((TextView) findViewById(R.id.input_txtfill2)).getText().toString();
-            Double mass = Double.parseDouble(tempMass);
 
-            if (name.isEmpty()) Toast.makeText(Edit2Activity.this, "Name cannot be empty. Try again.", Toast.LENGTH_LONG).show();
+            if (name.isEmpty() || tempMass.isEmpty())
+                Toast.makeText(Edit2Activity.this,
+                        "Name and mass cannot be empty. Try again.", Toast.LENGTH_LONG).show();
             else {
+                Double mass = Double.parseDouble(tempMass);
                 Dodo dodo = MyWaddle.clickedDodo;
                 dodo.name = name;
                 dodo.massKg = mass;
