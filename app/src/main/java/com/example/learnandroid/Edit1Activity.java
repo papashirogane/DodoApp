@@ -20,6 +20,10 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
+/**
+ * Shows a list of dodos.
+ * When a dodo is clicked, proceeds to Edit2Activity where dodo info can be edited
+ */
 public class Edit1Activity extends AppCompatActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 

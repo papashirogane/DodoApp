@@ -7,6 +7,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+/**
+ * Shows references list
+ */
 public class ReferencesActivity extends BaseActivity {
 
     @Override

@@ -15,12 +15,11 @@ public class DodoWaddle implements Iterable<Dodo> {
     public Dodo clickedDodo;
 
     private DodoWaddle() {
-        waddle.add(new Dodo("Baby", 3, R.drawable.lazy1, "Waaaaa!"));
-        waddle.add(new Dodo("Emo Teen", 5, R.drawable.lazy2, "Go away mom."));
-        waddle.add(new Dodo("Mama Dodo", 7, R.drawable.lazy3, "I gotta quit smoking."));
-        waddle.add(new Dodo("Happy Papi", 10, R.drawable.lazy4, "Borgor."));
-        waddle.add(new Dodo("Big Uncle", 15, R.drawable.lazy5, "Look at these GUNS *slaps biceps*"));
-        waddle.add(new Dodo("Lil Rhea", 20, R.drawable.lazy6, "I'm about the size and mass of a "));
+        waddle.add(new Dodo("Baby", 3, R.drawable.lazy1, "One day I'm gonna be 15 metres tall!"));
+        waddle.add(new Dodo("Gizzard", 7, R.drawable.lazy3, "Gizzard stones play an important role in my species' digestion."));
+        waddle.add(new Dodo("Mayor", 10, R.drawable.lazy4, "Humans call me a mayor to insinuate that I'm rich and fat."));
+        waddle.add(new Dodo("Chomper", 15, R.drawable.lazy5, "I use my strong beak to crush raw fruit... and to bite sailors."));
+        waddle.add(new Dodo("Lil Rhea", 20, R.drawable.lazy6, "I'm about the same mass as a small Rhea americana."));
     }
 
     public static DodoWaddle getInstance() {

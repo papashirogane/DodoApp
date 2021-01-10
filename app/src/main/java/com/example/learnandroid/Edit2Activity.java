@@ -13,6 +13,9 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
+/**
+ * Shows dodo information fiels that can be edited
+ */
 public class Edit2Activity extends AppCompatActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 

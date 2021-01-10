@@ -14,7 +14,7 @@ import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
 /**
- * Add dodo to waddle
+ * Adds a dodo to DodoWaddle
  */
 public class AddActivity extends BaseActivity {
     DodoWaddle waddle = DodoWaddle.getInstance();

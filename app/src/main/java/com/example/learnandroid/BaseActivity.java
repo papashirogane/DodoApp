@@ -8,6 +8,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * User never sees this activity
+ * Extended by every other activity (except MainActivity)
+ * Deals with menu selections in toolbar
+ */
 public class BaseActivity extends AppCompatActivity {
 
     @Override

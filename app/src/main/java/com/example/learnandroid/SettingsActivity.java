@@ -15,7 +15,7 @@ import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO;
 import static androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES;
 
 /**
- * Settings. Contains dark mode theme change.
+ * Settings. Contains dark mode theme change (unimplemented)
  */
 public class SettingsActivity extends BaseActivity {
 

@@ -19,6 +19,10 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
+/**
+ * List of dodos; clicking a dodo proceeds to a hunt
+ * Its XML file is included in Edit1Activity and DeleteActivity's XML files
+ */
 public class DodoListActivity extends BaseActivity {
     private DodoWaddle MyWaddle = DodoWaddle.getInstance();
 
@@ -66,7 +70,7 @@ public class DodoListActivity extends BaseActivity {
             dodoMass.setText(currentDodo.getMassKg() + " kg");
 
             TextView dodoDetails = (TextView) itemView.findViewById(R.id.item_txtDetails);
-            dodoDetails.setText("\"" + currentDodo.getDetails() + "\"");
+            dodoDetails.setText(currentDodo.getDetails());
 
             return itemView;
         }

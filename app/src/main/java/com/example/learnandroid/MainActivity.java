@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 
+/**
+ * First page the user sees. Has ImageView button to go to dodo list.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

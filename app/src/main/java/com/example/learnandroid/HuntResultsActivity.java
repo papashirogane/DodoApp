@@ -15,6 +15,9 @@ import com.example.learnandroid.model.island.IslandCalculator;
 
 import java.text.DecimalFormat;
 
+/**
+ * Displays results of hunt
+ */
 public class HuntResultsActivity extends BaseActivity {
 
     @Override

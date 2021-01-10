@@ -18,6 +18,9 @@ import com.example.learnandroid.model.island.Island;
 import com.example.learnandroid.model.island.IslandCalculator;
 import com.example.learnandroid.model.sailor.Sailor;
 
+/**
+ * Takes hunt info inputs from user and stores them in IslandCalculator
+ */
 public class HuntInputActivity extends BaseActivity {
 
     @Override

@@ -7,6 +7,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+/**
+ * Shows basic biological information about the dodo and its speed factors
+ */
 public class LearnActivity extends BaseActivity {
 
     @Override

@@ -22,6 +22,9 @@ import com.example.learnandroid.model.dodo.DodoWaddle;
 
 import java.util.List;
 
+/**
+ * Deletes a dodo from the list
+ */
 public class DeleteActivity extends BaseActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
 

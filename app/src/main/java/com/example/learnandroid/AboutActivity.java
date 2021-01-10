@@ -7,6 +7,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+/**
+ * About this app; shows user information about the purpose and calculations done in the app
+ */
 public class AboutActivity extends BaseActivity {
 
     @Override
