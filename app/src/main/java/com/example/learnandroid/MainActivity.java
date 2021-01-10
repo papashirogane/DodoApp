@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupStartButton() {
-        Button btn = (Button) findViewById(R.id.btnStart);
+        ImageView btn = (ImageView) findViewById(R.id.btnStart);
         btn.setOnClickListener(view -> {
             Intent intent = DodoListActivity.makeIntent(MainActivity.this);
             startActivity(intent);
