@@ -2,10 +2,12 @@ package com.example.learnandroid;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +29,7 @@ import java.util.List;
  */
 public class DeleteActivity extends BaseActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
+    ArrayAdapter<Dodo> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,20 +44,28 @@ public class DeleteActivity extends BaseActivity {
         registerClickCallback();
     }
 
+    // AlertDialog is learned from David Hedlund and Hariharan's answers in
+    // https://stackoverflow.com/questions/2115758/how-do-i-display-an-alert-dialog-on-android
     private void registerClickCallback() {
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setOnItemClickListener((adapterView, view, i, l) -> {
-            MyWaddle.waddle.remove(i);
-            Toast.makeText(DeleteActivity.this, "You deleted a dodo!", Toast.LENGTH_LONG).show();
-            Intent intent = DodoListActivity.makeIntent(DeleteActivity.this);
-            startActivity(intent);
-            finish();
+            Dodo clickedDodo = MyWaddle.waddle.get(i);
+            new AlertDialog.Builder(DeleteActivity.this)
+                    .setTitle("Delete dodo")
+                    .setMessage("Are you sure you want to delete dodo " + clickedDodo.getName() + "?")
+                    .setPositiveButton("Yes", (dialogInterface, i1) -> {
+                        MyWaddle.waddle.remove(i);
+                        adapter.notifyDataSetChanged();
+                        dialogInterface.dismiss();
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
         });
     }
 
     private void populateListView() {
         // Use an ArrayAdapter
-        ArrayAdapter<Dodo> adapter = new DeleteActivity.DodoAdapter();
+        adapter = new DeleteActivity.DodoAdapter();
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
