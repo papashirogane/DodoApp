@@ -9,8 +9,7 @@
     <string name="edit">Edit</string>
     <string name="settings">Settings</string>
     <string name="home">home</string>
-    <string name="dodo_list_select">Pick a dodo to hunt!</string>
-    <string name="delete_caption">Please pick a dodo to delete.</string>
+    <string name="dodo_list_select">Pick a dodo:</string>
     <string name="add_hintMass">ex: 10.0 for 10.0 kg</string>
     <string name="add_txtSubmit">CREATE</string>
     <string name="edit_txtSubmit">EDIT</string>
@@ -19,14 +18,14 @@
     <string name="add_hintName">Ex: John Dodo</string>
     <string name="name_of_dodo">Name of dodo</string>
     <string name="mass_kg">Mass [kg]</string>
-    <string name="about">About</string>
+    <string name="about">About this app</string>
     <string name="huntInput_txt1">How far is your cute dodo to its cave? [m]</string>
     <string name="huntInput_txt2">How far is your hungry sailor from the cave? [m]</string>
     <string name="huntInput_txt3">How healthy is your sailor, on a scale from 1 to 10?</string>
     <string name="huntInput_txtfill3">1 (almost dead), 5 (average citizen), 10 (Marvel superhero)</string>
     <string name="huntInput_txtfill2">10 for 10 metres</string>
     <string name="huntInput_txtfill1">7 for 7 metres</string>
-    <string name="learn_more">Learn more</string>
+    <string name="learn_more">About Dodos!</string>
     <string name="learn_strQuote">\"Amongst these birds were those which in India they call Dod-aersen (being a kind of very big goose); these birds are unable to fly, and instead of wings, they merely have a few small pins, yet they can run very swiftly.\"</string>
     <string name="learn_strQuoteCite">- 18th century manuscript (Cheke 2004)</string>
     <string name="about_strQuote">\"Striding bipedal locomotion has evolved independently in two vertebrate lineages, archosaurs and primates, and is represented today by humans and birds.\"</string>

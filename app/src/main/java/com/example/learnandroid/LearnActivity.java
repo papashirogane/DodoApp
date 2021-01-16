@@ -19,7 +19,7 @@ public class LearnActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarLearn);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Learn more");
+        getSupportActionBar().setTitle("Learn about Dodos!");
     }
 
     public static Intent makeIntent(Context context) {
