@@ -113,7 +113,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clipChildren="false">
 
                     <ImageButton
                         android:id="@+id/input_img1"
@@ -122,8 +123,11 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_add" />
+                        android:maxWidth="0dp"
+                        android:maxHeight="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:scaleType="fitCenter" />
 
                     <ImageButton
                         android:id="@+id/input_img2"
@@ -132,8 +136,11 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_settings" />
+                        android:maxWidth="0dp"
+                        android:maxHeight="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:scaleType="fitCenter" />
 
                     <ImageButton
                         android:id="@+id/input_img3"
@@ -142,8 +149,11 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_home" />
+                        android:maxWidth="0dp"
+                        android:maxHeight="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:scaleType="fitCenter" />
                 </TableRow>
 
                 <TableRow
@@ -158,8 +168,11 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_info" />
+                        android:maxWidth="0dp"
+                        android:maxHeight="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:scaleType="fitCenter" />
 
                     <ImageButton
                         android:id="@+id/input_img5"
@@ -168,8 +181,11 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_night" />
+                        android:maxWidth="0dp"
+                        android:maxHeight="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:scaleType="fitCenter" />
 
                     <ImageButton
                         android:id="@+id/input_img6"
@@ -178,8 +194,11 @@
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ic_edit" />
+                        android:maxWidth="0dp"
+                        android:maxHeight="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:scaleType="fitCenter" />
                 </TableRow>
 
             </TableLayout>

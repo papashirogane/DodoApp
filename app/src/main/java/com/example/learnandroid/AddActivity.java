@@ -29,7 +29,7 @@ import java.util.Objects;
 public class AddActivity extends BaseActivity {
     DodoWaddle waddle = DodoWaddle.getInstance();
     private int clickedIconId = R.drawable.dodo;
-    private int[] images = {R.drawable.ic_add, R.drawable.ic_settings
+    private int[] images = {R.drawable.dodo, R.drawable.ic_settings
             , R.drawable.ic_home, R.drawable.ic_info
             , R.drawable.ic_night, R.drawable.ic_edit};
 
