@@ -1,7 +1,6 @@
 package com.example.learnandroid;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.learnandroid.util.Util;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,11 +28,11 @@ public class LearnActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Learn about Dodos!");
 
-        setupDefs();
+        setupClickableText();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void setupDefs() {
+    private void setupClickableText() {
         Util util = Util.getSingleton();
         List<Integer> textBodyIds = new ArrayList<>();
         textBodyIds.add(R.id.learn_txtIntroBody);

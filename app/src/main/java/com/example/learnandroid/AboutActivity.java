@@ -29,11 +29,11 @@ public class AboutActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("About This App");
 
-        setupDefs();
+        setupClickableText();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void setupDefs() {
+    private void setupClickableText() {
         Util util = Util.getSingleton();
         List<Integer> textBodyIds = new ArrayList<>();
         textBodyIds.add(R.id.about_txtPurposeBody);
