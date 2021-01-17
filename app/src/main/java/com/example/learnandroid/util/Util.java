@@ -41,10 +41,11 @@ public class Util {
     public void searchClickableText(Context context, TextView tv) {
         String tvt = tv.getText().toString();
         dict.forEach((key, def) -> {
-            if (tvt.toLowerCase().contains(key)) {
+            CharSequence cs = key.toLowerCase();
+            if (tvt.toLowerCase().contains(cs)) {
                 setClickableText(tv, key, view -> {
                     Toast.makeText(context
-                            , "\"" + key  + "\"\n" + def + "\n(Merriam-Webster)"
+                            , key + ":\n" + def + "\n (Merriam-Webster)"
                             , Toast.LENGTH_LONG).show();
                 });
             }
