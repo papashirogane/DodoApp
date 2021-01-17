@@ -23,11 +23,16 @@ public class Util {
     private Hashtable<String, String> dict = new Hashtable<>();
 
     private Util() {
-        dict.put("bipedal locomotion", "Two-footed movement");
-        dict.put("columbids", "A family of game birds comprising the doves and pigeons");
-        dict.put("extant", "Currently or actually existing");
-        dict.put("Mauritius", "An island in the Indian Ocean in the central Mascarenes located east of Madagascar");
-        dict.put("vestigial", "Remaining in a form that is small or imperfectly developed and not able to function");
+        dict.put("bipedal locomotion", "Two-footed movement\n(Merriam-Webster)");
+        dict.put("columbids", "A family of game birds comprising the doves and pigeons\n(Merriam-Webster)");
+        dict.put("duty factor", "the fraction of the stride period in which the foot is on the ground\n(Blanco 2003)");
+        dict.put("extant", "Currently or actually existing\n(Merriam-Webster)");
+        dict.put("femur", "The proximal bone of the hind or lower limb that extends from the hip to the knee\n(Merriam-Webster)");
+        dict.put("hind leg proportion", "Length proportion of hind leg bones (femur to tibiotarsus to tarsometatarsus)\n(Claessens 2015");
+        dict.put("kiwi", "Any of a small genus (Apteryx) of flightless New Zealand birds with rudimentary wings, stout legs, a long bill, and grayish brown hairlike plumage\n(Merriam-Webster)");
+        dict.put("Mauritius", "An island in the Indian Ocean in the central Mascarenes located east of Madagascar\n(Merriam-Webster)");
+        dict.put("Rhea americana", "A species of flightless bird native to eastern South America\n(Wikipedia)");
+        dict.put("vestigial", "Remaining in a form that is small or imperfectly developed and not able to function\n(Merriam-Webster)");
     }
 
     public static Util getSingleton() {
@@ -45,7 +50,7 @@ public class Util {
             if (tvt.toLowerCase().contains(cs)) {
                 setClickableText(tv, key, view -> {
                     Toast.makeText(context
-                            , key + ":\n" + def + "\n (Merriam-Webster)"
+                            , key + ":\n" + def
                             , Toast.LENGTH_LONG).show();
                 });
             }
