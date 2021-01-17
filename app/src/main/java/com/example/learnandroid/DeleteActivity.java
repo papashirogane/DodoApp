@@ -25,7 +25,7 @@ import com.example.learnandroid.model.dodo.DodoWaddle;
 import java.util.List;
 
 /**
- * Deletes a dodo from the list
+ * Deletes a dodo from the list after user confirms "yes" on an AlertDialog.
  */
 public class DeleteActivity extends BaseActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();

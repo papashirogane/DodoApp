@@ -39,14 +39,12 @@ public class DodoListActivity extends BaseActivity {
     }
 
     private void populateListView() {
-        // Use an ArrayAdapter
         ArrayAdapter<Dodo> adapter = new DodoAdapter();
         ListView list = (ListView) findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
 
     private class DodoAdapter extends ArrayAdapter<Dodo> {
-
         public DodoAdapter() {
             super(DodoListActivity.this, R.layout.item_view, MyWaddle.waddle);
         }
@@ -57,21 +55,17 @@ public class DodoListActivity extends BaseActivity {
             if (itemView == null) {
                 itemView = getLayoutInflater().inflate(R.layout.item_view, parent, false);
             }
-            // Now we have a view, but it's just using the defaults I put in item_view.xml. I want to put in my own icon, name, weight, and height.
+            // Now we have a view, but it's just using the defaults I put in item_view.xml.
+            // I want to put in my own icon, name, weight, and height values.
             Dodo currentDodo = MyWaddle.get(position);
-
-            ImageView imageView = (ImageView) itemView.findViewById(R.id.item_icon); // not sure why we have to findViewById inside of ImageView instead of just this activity
+            ImageView imageView = (ImageView) itemView.findViewById(R.id.item_icon);
             imageView.setImageResource(currentDodo.getIconId());
-
             TextView dodoName = (TextView) itemView.findViewById(R.id.item_txtName);
             dodoName.setText(currentDodo.getName());
-
             TextView dodoMass = (TextView) itemView.findViewById(R.id.item_txtMass);
             dodoMass.setText(currentDodo.getMassKg() + " kg");
-
             TextView dodoDetails = (TextView) itemView.findViewById(R.id.item_txtDetails);
             dodoDetails.setText(currentDodo.getDetails());
-
             return itemView;
         }
     }
