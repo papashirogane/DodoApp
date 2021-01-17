@@ -1,17 +1,25 @@
 package com.example.learnandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import com.example.learnandroid.util.Util;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * About this app; shows user information about the purpose and calculations done in the app
  */
 public class AboutActivity extends BaseActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +28,24 @@ public class AboutActivity extends BaseActivity {
         Toolbar toolbar = findViewById(R.id.toolbarAbout);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("About This App");
+
+        setupDefs();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void setupDefs() {
+        Util util = Util.getSingleton();
+        List<Integer> textBodyIds = new ArrayList<>();
+        textBodyIds.add(R.id.about_txtPurposeBody);
+        textBodyIds.add(R.id.about_txtHuntBody);
+        textBodyIds.add(R.id.about_txtMathBody);
+        textBodyIds.add(R.id.about_txtDiscussionBody);
+        textBodyIds.add(R.id.about_txtLimitsBody);
+
+        for (Integer id : textBodyIds) {
+            TextView view = findViewById(id);
+            util.searchClickableText(AboutActivity.this, view);
+        }
     }
 
     public static Intent makeIntent(Context context) {
