@@ -13,6 +13,7 @@ import com.example.learnandroid.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Shows basic biological information about the dodo and its speed factors
@@ -26,7 +27,7 @@ public class LearnActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarLearn);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Learn about Dodos!");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Learn about Dodos!");
 
         setupClickableText();
     }

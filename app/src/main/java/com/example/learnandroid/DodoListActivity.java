@@ -9,15 +9,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
+
+import java.util.Objects;
 
 /**
  * List of dodos; clicking a dodo proceeds to a hunt
@@ -30,9 +30,9 @@ public class DodoListActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodo_list);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDodoList);
+        Toolbar toolbar = findViewById(R.id.toolbarDodoList);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Dodo Hunt");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Dodo Hunt");
 
         populateListView();
         registerClickCallback();
@@ -40,7 +40,7 @@ public class DodoListActivity extends BaseActivity {
 
     private void populateListView() {
         ArrayAdapter<Dodo> adapter = new DodoAdapter();
-        ListView list = (ListView) findViewById(R.id.listviewDodo);
+        ListView list = findViewById(R.id.listviewDodo);
         list.setAdapter(adapter);
     }
 
@@ -58,20 +58,20 @@ public class DodoListActivity extends BaseActivity {
             // Now we have a view, but it's just using the defaults I put in item_view.xml.
             // I want to put in my own icon, name, weight, and height values.
             Dodo currentDodo = MyWaddle.get(position);
-            ImageView imageView = (ImageView) itemView.findViewById(R.id.item_icon);
+            ImageView imageView = itemView.findViewById(R.id.item_icon);
             imageView.setImageResource(currentDodo.getIconId());
-            TextView dodoName = (TextView) itemView.findViewById(R.id.item_txtName);
+            TextView dodoName = itemView.findViewById(R.id.item_txtName);
             dodoName.setText(currentDodo.getName());
-            TextView dodoMass = (TextView) itemView.findViewById(R.id.item_txtMass);
-            dodoMass.setText(currentDodo.getMassKg() + " kg");
-            TextView dodoDetails = (TextView) itemView.findViewById(R.id.item_txtDetails);
+            TextView dodoMass = itemView.findViewById(R.id.item_txtMass);
+            dodoMass.setText(String.format("%s kg", currentDodo.getMassKg()));
+            TextView dodoDetails = itemView.findViewById(R.id.item_txtDetails);
             dodoDetails.setText(currentDodo.getDetails());
             return itemView;
         }
     }
 
     private void registerClickCallback() {
-        ListView list = (ListView) findViewById(R.id.listviewDodo);
+        ListView list = findViewById(R.id.listviewDodo);
         list.setOnItemClickListener((adapterView, view, i, l) -> {
             MyWaddle.clickedDodo = MyWaddle.get(i);
             startActivity(HuntInputActivity.makeIntent(DodoListActivity.this));

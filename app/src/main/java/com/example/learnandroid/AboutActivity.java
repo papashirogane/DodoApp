@@ -13,6 +13,7 @@ import com.example.learnandroid.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * About this app; shows user information about the purpose and calculations done in the app
@@ -27,7 +28,7 @@ public class AboutActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarAbout);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("About This App");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("About This App");
 
         setupClickableText();
     }

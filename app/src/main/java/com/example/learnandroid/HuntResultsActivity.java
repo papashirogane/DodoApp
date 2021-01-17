@@ -1,19 +1,17 @@
 package com.example.learnandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.learnandroid.model.island.IslandCalculator;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 /**
  * Displays results of hunt
@@ -27,7 +25,7 @@ public class HuntResultsActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarHuntResults);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Dodo Hunt");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Dodo Hunt");
 
         setupText();
         setupTable();
@@ -39,9 +37,9 @@ public class HuntResultsActivity extends BaseActivity {
         IslandCalculator c = IslandCalculator.getInstance();
         if (!c.survival) {
             TextView title = findViewById(R.id.results_txtTitle);
-            title.setText("Om nom nom!");
+            title.setText(R.string.omnomnom);
             TextView message = findViewById(R.id.results_txtMessage);
-            message.setText("Looks like your sailor is no longer hungry...");
+            message.setText(R.string.omnomnom_msg);
             TextView science = findViewById(R.id.results_txtScience);
             science.setText(R.string.results_strScienceDied);
         }
@@ -58,17 +56,15 @@ public class HuntResultsActivity extends BaseActivity {
     }
 
     private void setupLearnMoreButton() {
-        Button button = (Button) findViewById(R.id.results_btnLearn);
-        button.setOnClickListener(view -> {
-            startActivity(LearnActivity.makeIntent(HuntResultsActivity.this));
-        });
+        Button button = findViewById(R.id.results_btnLearn);
+        button.setOnClickListener
+                (view -> startActivity(LearnActivity.makeIntent(HuntResultsActivity.this)));
     }
 
     private void setupHuntAgainButton() {
-        Button button = (Button) findViewById(R.id.results_btnAgain);
-        button.setOnClickListener(view -> {
-            startActivity(DodoListActivity.makeIntent(HuntResultsActivity.this));
-        });
+        Button button = findViewById(R.id.results_btnAgain);
+        button.setOnClickListener
+                (view -> startActivity(DodoListActivity.makeIntent(HuntResultsActivity.this)));
     }
 
     public String format(double amount) {

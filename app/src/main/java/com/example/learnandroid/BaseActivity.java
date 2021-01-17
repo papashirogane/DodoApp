@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Objects;
+
 /**
  * User never sees this activity
  * Extended by every other activity (except MainActivity)
@@ -22,7 +24,7 @@ public class BaseActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarBase);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Base");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Base");
     }
 
     @Override

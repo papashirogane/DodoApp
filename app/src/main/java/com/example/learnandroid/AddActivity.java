@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.example.learnandroid.model.dodo.Dodo;
 import com.example.learnandroid.model.dodo.DodoWaddle;
 
+import java.util.Objects;
+
 /**
  * Adds a dodo to DodoWaddle
  */
@@ -39,7 +41,7 @@ public class AddActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarInput);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Create Your Dodo!");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Create Your Dodo!");
 
         setupHints();
         setupTableButtons();
@@ -47,11 +49,11 @@ public class AddActivity extends BaseActivity {
     }
 
     private void setupHints() {
-        TextView textView = (TextView) findViewById(R.id.input_txtfill1);
+        TextView textView = findViewById(R.id.input_txtfill1);
         textView.setHint(R.string.add_hintName);
-        textView = (TextView) findViewById(R.id.input_txtfill2);
+        textView = findViewById(R.id.input_txtfill2);
         textView.setHint(R.string.add_hintMass);
-        textView = (TextView) findViewById(R.id.input_txtfill3);
+        textView = findViewById(R.id.input_txtfill3);
         textView.setHint(R.string.add_hintDetails);
     }
 
@@ -111,7 +113,7 @@ public class AddActivity extends BaseActivity {
     }
 
     private void setupCreateButton() {
-        Button button = (Button) findViewById(R.id.input_btnSubmit);
+        Button button = findViewById(R.id.input_btnSubmit);
         button.setText(R.string.add_txtSubmit);
         button.setOnClickListener(view -> {
             String name = ((TextView) findViewById(R.id.input_txtfill1)).getText().toString();
@@ -122,10 +124,10 @@ public class AddActivity extends BaseActivity {
                 Toast.makeText(AddActivity.this,
                         "Name and mass cannot be empty. Try again.", Toast.LENGTH_LONG).show();
             else {
-                Double mass = Double.parseDouble(tempMass);
+                double mass = Double.parseDouble(tempMass);
                 Dodo newDodo = new Dodo(name, mass, clickedIconId, details);
                 waddle.add(newDodo);
-                Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_SHORT).show();
                 Intent intent = DodoListActivity.makeIntent(AddActivity.this);
                 startActivity(intent);
                 finish();

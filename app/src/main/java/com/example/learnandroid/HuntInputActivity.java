@@ -1,13 +1,10 @@
 package com.example.learnandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +14,8 @@ import com.example.learnandroid.model.dodo.DodoWaddle;
 import com.example.learnandroid.model.island.Island;
 import com.example.learnandroid.model.island.IslandCalculator;
 import com.example.learnandroid.model.sailor.Sailor;
+
+import java.util.Objects;
 
 /**
  * Takes hunt info inputs from user and stores them in IslandCalculator
@@ -30,20 +29,20 @@ public class HuntInputActivity extends BaseActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarHunt);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Dodo Hunt");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Dodo Hunt");
 
         setupButton();
     }
 
     private void setupButton() {
-        Button button = (Button) findViewById(R.id.hunt_btnSubmit);
+        Button button = findViewById(R.id.hunt_btnSubmit);
         button.setOnClickListener(view -> {
             String strDistDodo = ((TextView) findViewById(R.id.hunt_txtfill1)).getText().toString();
             String strDistSailor = ((TextView) findViewById(R.id.hunt_txtfill2)).getText().toString();
             String strHealthSailor = ((TextView) findViewById(R.id.hunt_txtfill3)).getText().toString();
-            Double distDodo = Double.parseDouble(strDistDodo);
-            Double distSailor = Double.parseDouble(strDistSailor);
-            Integer healthSailor = Integer.parseInt(strHealthSailor);
+            double distDodo = Double.parseDouble(strDistDodo);
+            double distSailor = Double.parseDouble(strDistSailor);
+            int healthSailor = Integer.parseInt(strHealthSailor);
 
             if (strDistDodo.isEmpty() || strDistSailor.isEmpty() || strHealthSailor.isEmpty()) {
                 Toast.makeText(HuntInputActivity.this, "All fields must be filled.", Toast.LENGTH_LONG).show();

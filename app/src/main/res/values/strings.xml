@@ -83,4 +83,6 @@
         \n\n\t\tI did not consider bone strength. Claessens (2015) says \"the strong, robust hind limbs would have been necessary to support the bulk of a large, terrestrial pigeon, but were equally suited for agile maneuverability\"; this may have benefited the dodo when being hunted by sailors.
         \n\n\t\tThis is max speed! This is not the speed that a dodo or human can maintain for extended periods of time. I am assuming naively that in a hunt, dodos (who were not that scared of humans) are sprinting for their lives and hungry sailors are sprinting after them.</string>
     <string name="endSpace">\n\n\n\n\n\n\n\n\n\n\n\n</string>
+    <string name="omnomnom">Om nom nom!</string>
+    <string name="omnomnom_msg">Looks like your sailor is no longer hungry...</string>
 </resources>
