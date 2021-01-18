@@ -29,9 +29,6 @@ import java.util.Objects;
 public class Edit2Activity extends BaseActivity {
     DodoWaddle MyWaddle = DodoWaddle.getInstance();
     private int clickedIconId = R.drawable.dodo;
-    private int[] images = {R.drawable.ic_add, R.drawable.ic_settings
-            , R.drawable.ic_home, R.drawable.ic_info
-            , R.drawable.ic_night, R.drawable.ic_edit};
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -71,6 +68,7 @@ public class Edit2Activity extends BaseActivity {
             TableRow row = (TableRow) table.getChildAt(y);
             int cols = row.getChildCount();
             for (int x = 0; x < cols; x++) {
+                int[] images = MyWaddle.iconOpts;
                 ImageButton button = (ImageButton) row.getChildAt(x);
                 Drawable clickedIcon = getDrawable(images[(y * cols) + x]);
                 button.setImageDrawable(clickedIcon);

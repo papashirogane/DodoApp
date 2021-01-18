@@ -27,11 +27,8 @@ import java.util.Objects;
  * Adds a dodo to DodoWaddle
  */
 public class AddActivity extends BaseActivity {
-    DodoWaddle waddle = DodoWaddle.getInstance();
+    DodoWaddle MyWaddle = DodoWaddle.getInstance();
     private int clickedIconId = R.drawable.dodo;
-    private int[] images = {R.drawable.dodo, R.drawable.ic_settings
-            , R.drawable.ic_home, R.drawable.ic_info
-            , R.drawable.ic_night, R.drawable.ic_edit};
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -70,6 +67,7 @@ public class AddActivity extends BaseActivity {
             TableRow row = (TableRow) table.getChildAt(y);
             int cols = row.getChildCount();
             for (int x = 0; x < cols; x++) {
+                int[] images = MyWaddle.iconOpts;
                 ImageButton button = (ImageButton) row.getChildAt(x);
                 Drawable clickedIcon = getDrawable(images[(y * cols) + x]);
                 button.setImageDrawable(clickedIcon);
@@ -126,7 +124,7 @@ public class AddActivity extends BaseActivity {
             else {
                 double mass = Double.parseDouble(tempMass);
                 Dodo newDodo = new Dodo(name, mass, clickedIconId, details);
-                waddle.add(newDodo);
+                MyWaddle.add(newDodo);
                 Toast.makeText(AddActivity.this, "You created a dodo!", Toast.LENGTH_SHORT).show();
                 Intent intent = DodoListActivity.makeIntent(AddActivity.this);
                 startActivity(intent);

@@ -13,6 +13,9 @@ public class DodoWaddle implements Iterable<Dodo> {
     private static DodoWaddle single_instance = null;
     public List<Dodo> waddle = new ArrayList<>();
     public Dodo clickedDodo;
+    public final int[] iconOpts = {R.drawable.ic_add, R.drawable.ic_settings
+            , R.drawable.ic_home, R.drawable.ic_info
+            , R.drawable.ic_night, R.drawable.ic_edit};
 
     private DodoWaddle() {
         waddle.add(new Dodo("Baby", 3, R.drawable.lazy1, "One day I'm gonna be 15 metres tall!"));
